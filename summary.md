@@ -1,62 +1,52 @@
-# Menu
-
-## 2021
-
-## 2023
-
-Since the onset of the COVID-19 pandemic, the global reliance on the services provided by a range of major online platform companies has skyrocketed. Online marketplaces, social networks, cloud providers, streaming services, and service delivery platforms all rake in record and increasing profits as they continue to embed themselves ever more deeply into public and private life. At the same time, dissatisfaction with the platform economy status quo is growing internationally. Across policy areas like content moderation, competition, labor law, and data protection, governments around the world are developing new rules to tackle troubling forms of outsized political, cultural, and infrastructural platform power.
-
-## 2025
-
-A changing mix of competing platform companies faced with various efforts to regulate, influence, or control them and their offers has become an ever more central feature of many societies. Monolithic services begin to fracture and decentralized platform infrastructures emerge. Some governments assert their power and authority through the agenda of "digital sovereignty". New constellations of actors emerge and tensions manifest across state, market, and civil society. We witness realignments in the political economy of platforms and societies.
-
 # PlatGovNet2025 Summary: Transitions, frictions, and new realities in global platform governance
 
-Ever since we have understood platforms to have “[eaten the world](https://www.forbes.com/sites/gregsatell/2016/09/02/platforms-are-eating-the-world-3/)”, platform governance research emerged as an effort to understand the nature of governance *by*, *with*, and *through* such actors.  This makes it an essentially interdisciplinary field that borrows and mixes elements of any discipline that helps describe its material, legal, political and social conditions, relative to its ever-evolving nature.  The PlatGovNet conference is one opportunity to reconvene all of those who take part in this effort and constitute the state of the field today. 
+Ever since we have understood platforms to have “[eaten the world](https://www.forbes.com/sites/gregsatell/2016/09/02/platforms-are-eating-the-world-3/)”, platform governance research emerged as an effort to understand the nature of governance *by*, *with*, and *through* the companies and other actors who own and operate them.  This makes it an essentially interdisciplinary field that borrows and mixes elements of any discipline that helps describe its material, legal, political and social conditions relative to its ever-evolving nature. The Platform Governance Research Network (PlatGovNet) conference is one opportunity to reconvene all of those who take part in this effort and constitute the state of the field today. 
 
-## Previously
+## **PlatGovNet way back when**
 
 Taking place during the COVID-19 pandemic, the inaugural PlatGovNet conference in 2021 took place while societies worldwide confronted their dependence on digital platforms. The 2023 conference signaled both the field’s growing maturity and its increasingly normative orientation. The evolution of the PlatGovNet conferences over the past four years reminds us how the field has matured, what questions have proven enduring, and where new concerns have emerged. 
 
-Important shifts have occurred. Where the 2021 conference occurred before major regulatory frameworks took effect, 2023 researchers were actively engaging with the EU’s Digital Services Act, examining its implications, limitations, and potential global influence. The conference discourse shifted from *whether* to regulate platforms toward questions of *how* regulation and governance would work sustainably, inclusively, and democratically in practice. 
+Important shifts have occurred. Above all, the regulatory landscape has transformed between 2021 and 2023\. While the 2021 conference occurred before major regulatory frameworks took effect, in 2023 researchers were actively engaging with the EU’s Digital Services Act, examining its implications, limitations, and potential global influence. The conference discourse shifted from *whether* to regulate platforms to *how* regulation and governance could work sustainably, inclusively, and democratically.
 
-Meanwhile, alternative and decentralized platforms also became a significant focus by 2023, reflecting both emerging platforms like Mastodon and Bluesky and growing researcher interest in governance models beyond centralized corporate platforms.
+Meanwhile, alternative and decentralised platforms also became a significant focus, reflecting both emerging platforms like Mastodon and Bluesky and growing interest in governance models beyond centralised corporate platforms.
 
-Yet both showcased early work on what have become persistent themes in this year’s conference. *Content moderation* remained central, examined from multiple angles including community moderation practices, moderation of specific content types (toxicity, hate speech, misinformation), and the labor of trust and safety workers. The question of how to *study platforms empirically* persisted, with continued attention to transparency, data access, and research methods. Further, *global and comparative perspectives about platform governance* remained a through-line, through the understanding of specific regional contexts, and the geopolitics of digital infrastructure.
+Both conference editions laid the foundations to what have become persistent themes. *Content moderation* remains central and is examined from multiple angles, including community moderation practices, moderation of specific types of content, and the labor of trust and safety workers. The question of how to *study platforms empirically* persists, with continued attention to transparency, data access, and research methods. *Global and comparative perspectives about platform governance* is also a through-line through the understanding of specific regional contexts and the geopolitics of digital infrastructure.
 
 These themes would set the stage for the 2025 conference, as we confronted new realities that both inspired and complicated these enduring concerns.
 
-## This year
+## **PlatGovNet in 2025**
 
-This year, our questions adapt to a landscape markedly different from even a few years ago. 
+Last year, our questions adapted to a landscape markedly different from even a few years ago. 
 
-### Governments worldwide are asserting new forms of regulatory authority through formal and informal mechanisms.
+**Governments worldwide are asserting new forms of regulatory authority through formal and informal mechanisms**. 
 
-In the EU, we have seen new AI regulatory frameworks that have laid down the basic vocabulary by which AI companies define, estimate and respond to “societal risk”. Though once more defiant, the region has continued to penalise platforms for both old and new types of such risks. There have been disinformation campaigns during various elections, but also new (if innovative) forms of risky content: deepfakes, nudes, and the AI-generated historical revisionism of Grok (depending on who you ask). 
+In the EU, we have seen new AI regulatory frameworks that have laid down the basic vocabulary by which AI companies are required to define, estimate and respond to “societal risk”. There have been disinformation campaigns during various elections, but also new (if innovative) forms of “risky” content: deepfakes, nudes, and the AI-generated historical revisionism of Grok (depending on who you ask). 
 
 Brazilian legislation has also reaffirmed its authority over a variety of platforms infringing upon local standards to safeguard democracy. Though, like in Europe, there is no lack of contestation to these legislations, this happens in the context of increasingly politicised platforms that actively partake in this contestation. X is an example, but not the only one. 
 
-Alongside these formal regulatory frameworks, states have also exerted power over platforms through less visible, informal mechanisms of negotiation and coercion. In several jurisdictions, governments have sought access to encrypted user data for public safety, and effectively compel platforms to choose between market access and resistance. For instance, the ongoing pressure in the UK and Australia to require technical capabilities that would weaken end-to-end encryption, illustrate how state authority could be exercised through executive pressure. Similar dynamics are visible in data localization requirements on local data storage for messaging and cloud services.
+Alongside these formal regulatory frameworks, states have exerted power over platforms through less visible, informal mechanisms of negotiation and coercion. In several jurisdictions, governments have sought access to encrypted user data for public safety, and effectively compel platforms to choose between market access and resistance. For instance, the ongoing pressure in several countries to require technical capabilities that would weaken end-to-end encryption, illustrate how state authority could be exercised through executive pressure. Similar dynamics are visible in data localisation requirements on local data storage for messaging and cloud services.
 
-In this context, Trump’s second presidency — only a year old — **has ushered in a new era in content moderation philosophies.** 
+In this context, Trump’s second presidency — only a year old — **has contributed to new content moderation philosophies (or indeed a “renewed” return to older forms)**. 
 
-There is a sense that moderation has become yet another form of censorship, often colluding with the non-universal standards of left-wing norms, framed as such in the context of hyper-polarised culture wars and speech controversies. The assumption about platforms is that they must not only refrain from removal as much as possible, they must also export freedom of expression as their main product. At the same time, they no longer comply hastily to the regulatory standards of state actors, but challenge them, via the White House, in the name of American interests. 
+In the highly polarised (at the very least conflicted) environments that platforms host and operate in, there is a sense, especially from the global right, that moderation has become yet another form of censorship that colludes with non-universal standards on the left. In that context, platforms like X and alt-tech competitors place *themselves* in the midst of culture wars where speech moderation controversies remain a central bone of contention. The assumption, from these actors, is that platforms must in a sense return lesser moderation as an ideological “centre ground” for maximum freedom of expression as a new product feature. And while one may qualify this moderation regime a form of extremism, it goes without saying that the broader political dynamics to which it responds are generally extreme.
 
-### There are also new opportunities to intervene and pluralize platform markets via decentralized social infrastructures.
+In this same context, some platforms feel no longer compelled to comply with the regulatory standards of state actors, and challenge them, via the White House, in the name of “American values” and business interests. The question of tech sovereignty — typically located at the peripheries of the West — are now at the heart of EU tech policy.
 
-Enthusiasm for the fediverse had already emerged since the COVID years as part of a move from proposing different platform models towards a marketplace of different “[protocols](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech)”. We have since seen the emergence of a maturing terminology that embraces this space as one of opportunities for new platform governance methods. One example is the notion of middleware, which refers to the possibility of third parties to design their own platform mechanisms (feeds, recommenders, etc.) into modular platform designs, such as Bluesky’s — or push these as a regulatory protocol for all platforms to comply with. 
+**There are also new opportunities to intervene and pluralise platform markets via decentralised social infrastructures**. 
+
+Enthusiasm for the fediverse once emerged in the COVID years as part of a move from proposing different platform models towards a marketplace of different [protocols](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech). Though user numbers remain somewhat stagnant, we have since seen the emergence of a maturing terminology that embraces this space as one of opportunities for new platform governance methods. One example is the notion of middleware, which refers to the possibility of third parties to design their own platform mechanisms (feeds, recommenders, etc.) into modular platform designs, such as Bluesky’s — or push these as a regulatory protocol for all platforms to comply with. 
 
 In the meantime, a widening array of actors, from content moderators and trusted flaggers to oversight boards and federated communities, are reshaping how governance operates in practice. We see a diversification of actors that come to enrich (and complicate) the platform governance triangle we have as a roadmap.
 
-Understanding these changing landscapes requires sustained and creative empirical investigation**. It also calls for new conceptual frameworks and methodological tools capable of capturing the complexity of contemporary platform ecosystems. The theme this year, **Transitions, Frictions, and New Realities in Platform Governance**, reflects this moment of transformation.
+**Understanding these changing landscapes requires sustained and creative empirical investigation**. It also calls for new conceptual frameworks and methodological tools capable of capturing the complexity of contemporary platform ecosystems. Our theme this year, **Transitions, Frictions, and New Realities in Platform Governance**, reflects this moment of transformation.
 
-## Keynote speakers
+## **Keynote speakers**
 
-As the third edition of the Platform Governance Research Network Conference (PlatGovNet), PlatGovNet 2025 brought together 64 contributions from across the world, and featured three keynote conversations with industry and civil society actors. 
+The third edition of the PlatGovNet conference brought together 64 contributions from across the world, and featured three keynote conversations with industry and civil society actors. 
 
 We started with [Aline Os](https://br.linkedin.com/in/aline-os-ba56b421), who brought insights from her experience building the collective platform [Señoritas Courier](https://senhoritascc.com.br/) in São Paulo and thoughts on platform cooperativism.
 
-Aline founded her collective as a response to the widespread state of [unreported employment](https://pt.wikipedia.org/wiki/Trabalho_informal) (“trabalho informal”) in Brazil. Señoritas Courier is a network of delivery bikers whose response to platformized work is to propose a form of cooperativism based on “care before code” (a concept coined by [the Disco network](https://thedisconetwork.com/)) as opposed to corporate platform logic. Señoritas’ cooperative entails an organisation based on internal logics of care, via collective deliberation and the rules that it establishes. There is no app to speak of, but instead a set of internally agreed parameters: what distance workers should run; the limit of the weight of their deliveries; their working hours; the number of roads they journey; and an overall balance of distributed tasks for balanced earnings. 
+Aline founded her collective as a response to the widespread state of [unreported employment](https://pt.wikipedia.org/wiki/Trabalho_informal) (“trabalho informal”) in Brazil. Señoritas Courier is a network of delivery bikers whose response to platformised work is to propose a form of cooperativism based on “care before code” (a concept coined by [the Disco network](https://thedisconetwork.com/)) as opposed to corporate platform logic. Señoritas’ cooperative entails an organisation based on internal logics of care, via collective deliberation and the rules that it establishes. There is no app to speak of, but instead a set of internally agreed parameters: what distance workers should run; the limit of the weight of their deliveries; their working hours; the number of roads they journey; and an overall balance of distributed tasks for balanced earnings. 
 
 This process was later crystallised into a method for software design, based on a collaboration with the [Technology Centre of the Homeless Workers’ Movement](https://www.nucleodetecnologia.com.br/). The goal was to translate the social technology of Señoritas into a digital platform owned by workers. Though the platform is not functioning today, it brings important lessons about the reality of the financial costs of maintenance, clashes with proprietary software, desires to maintain open and community-supported resources, and most importantly the “social technology” that subsists without technical interfaces. The potential of these tools resides in the translation between practical and technical know-how shared between workers, social movements, academia and governments. 
 
@@ -68,25 +58,25 @@ On content moderation’s legitimacy crisis, Jessica highlighted Reddit’s comm
 
 But Reddit remains a platform where users pre-select the content they consume, with, of course, some contact with broadly “popular” content. There is no absence of structural conflict on the platform. So what about the siloing effects of self-selected subreddit content? Here Jessica points to the distinct nature of Reddit’s cross-cutting spaces specifically carved for cross-partisan dialogue. There may be spaces specifically designed for curiosity-driven dialogue to change one’s mind (r/ProveMeWrong); to inquire about who is foreign or enemy (r/AskAConservative, r/AskALiberal); or to initiate bottom-up peacebuilding initiatives (r/IsraelPalestine, r/KarabakhConflict, and more). 
 
-If this were to scale to a geopolitical scale, how would Reddit approach the international politics of speech regulation? Through a positioned or “principled approach” to retain basic norms that may adapt but not change fundamentally under whatever legislative configuration or national power swings. Though Reddit is obligated to follow the laws of the countries in which they operate, they will use “all \[available\] lawful methods” to “push back” when they think the law is being applied unjustly, or when the law itself may be unjust. Freedom of speech is, of course, the name of today’s game. 
+If this were to scale to a geopolitical scale, how would Reddit approach the international politics of speech regulation? Through a positioned or “principled approach” to retain basic norms that may adapt but not change fundamentally under whatever legislative configuration or national power swings. Though Reddit is obligated to follow the laws of the countries in which they operate, they will use “all \[available\] lawful methods” to “push back” when they think the law is being applied unjustly, or when the law itself may be unjust. Freedom of speech is the name of today’s game. 
 
 At last, generative AI: how does Reddit remain “the most human place on the Internet” in light of so much AI-generated content? By embracing an emerging role as a “premium” space for “trusted human spaces” where the overall guardrails and nature of subreddit conversations *must rely* on authentic content, unlike the more vanity-driven and impersonal spaces of centralised platforms. The deeply contextual nature of Reddit conversations (where users need to be in the know and abide by basic subreddit norms) would in theory deny pre-empt any value to impersonal AI slop.
 
-Finally, [Aaron Rodericks](https://bsky.app/profile/aaron.bsky.team), Head of Trust & Safety from Bluesky, set the tone for discussions focused on emerging governance models, from federated networks to public interest infrastructures. Bluesky started as an in-house project under Twitter, when Jack Dorsey considered a decentralized architecture as a means to get away from excessive legal compliance and an architecture protocol more resilient against “different censorship happening around the world”.  
+Finally, [Aaron Rodericks](https://bsky.app/profile/aaron.bsky.team), Head of Trust & Safety from Bluesky Social, set the tone for discussions focused on emerging governance models, from federated networks to public interest infrastructures. Bluesky started as an in-house project under Twitter, when Jack Dorsey considered a decentralized architecture as a means to get away from excessive legal compliance and an architecture protocol more resilient against “different censorship happening around the world”.  
 
 This means a fundamentally different moderation architecture than what one is used to chart in centralised platform models. Many of us who have explored the fediverse and related topics will know that Bluesky is built on a [composable stack](https://bsky.social/about/blog/4-13-2023-moderation). There are, like Reddit, “basic defaults”, a universal set of norms that apply to the whole platform. But there are also custom filters that apply to moderation choices, open to third-party modifications and user preferences. One example are moderation labels developed by and for specific Bluesky groups. 
 
-In a sense, the reason for customisation as a central ideological core of Bluesky is a diametrical response to excessive centralisation in other platforms. A centralisation of moderation norms; of ideological and other vested interests of CEOs like Musk; of attention, fomented by a unique algorithmic logic; and of power, obfuscated by the internal decision-making of platform monopolies. While this resembles a return to early federated Web development models, we may speak of a platformized model of distributed governance. 
+In a sense, the reason for customisation as a central ideological core of Bluesky is a diametrical response to excessive centralisation in other platforms. A centralisation of moderation norms; of ideological and other vested interests of CEOs like Musk; of attention, fomented by a unique algorithmic logic; and of power, obfuscated by the internal decision-making of platform monopolies. While this resembles a return to early federated Web development models, we may speak of a platformised model of distributed governance. 
 
 Of course, there are tensions. One is the calcification of centralised models even in decentralised infrastructures. This is reflected in regulation, which is primarily written for centralised models, as well as in protocols themselves, which still require some degree of centralisation. In this context, users have been brought up to use largely passive, consumer-friendly interfaces where content primarily comes to them. As such, the familiarity of average platforms is Bluesky’s preferred aesthetic — though “the subversiveness” remains “baked underneath”. 
 
 Bluesky’s composable model has been considered by some of us who see a possibility in implementing “[better feeds](https://kgi.georgetown.edu/research-and-commentary/better-feeds/)”, particularly those that may *at least* attenuate the levels of information disorder, perception gaps and affective polarisation measured online. This is the case for [bridging](https://knightcolumbia.org/content/bridging-systems) or “[prosocial media](https://arxiv.org/abs/2502.10834)” models in general. And though some hope rests on these initiatives, Aaron cautions about the limits of good faith in users almost as from a Sartre play: 
 
-*“users don’t want more control over their own experience — they want to have control over the experience of others.”* 
+“users don’t want more control over their own experience — they want to have control over the experience of others.” 
 
-The question then becomes how to manage the actual desire of users for negative interactions. We enter the realm of political philosophy — or perhaps we have never left it. 
+The question then becomes how to manage the actual desire of users for negative interactions. We enter the realm of political philosophy (or perhaps we have never left it), to the extent that governance often invokes different ideas of human — user — nature. 
 
-## Ongoing conversations
+## **Ongoing conversations**
 
 Many of the panels in the 2025 conference extended conversations once started in 2021\. 
 
@@ -102,7 +92,7 @@ Another ongoing conversation is about **political economy and infrastructural co
 
 The ***Platform Labor and Political Economy*** pointed to labor arrangements that remain unequal and unevenly visible. This implies examining how algorithmic management, interface design, and outsourcing practices continue to shape the conditions of platform workers, which echo concerns raised in 2021 around gig work and labor of content moderation. What emerged more clearly this year was the extent to which regulatory frameworks themselves increasingly rely on (and to some extent reproduce) these labor arrangements, be it through audit practices or risk assessments. There is a sense that governance and labor are both being commodified through platform infrastructures, with market logics shaping everything from privacy compliance to domestic work arrangements all while performing accountability and transparency. 
 
-Another enduring PlatGovNet concern was revisited through the panel of ***Global Content Moderation*** about the uneven distribution of moderation capacity and the contextual understandings of harm. CIn particular, contributions highlighted persistent disparities in moderation resources, language coverage, and the priorities of platform’s content enforcement across regions, in a way that could systematically marginalize non-Western contexts. 
+Another enduring PlatGovNet concern was revisited through the panel of ***Global Content Moderation*** about the uneven distribution of moderation capacity and contextual understandings of harm. Contributions highlighted persistent disparities in moderation resources, language coverage, and the priorities of platform’s content enforcement across regions, in a way that could systematically marginalize non-Western contexts. 
 
 Across eight languages, for example, low removal rates persist regardless of the severity of a hate-related violation, while English remains the most moderated language and Arabic the least. The panel also found that AI tools cannot scale, likely because low-resource languages continue to be underserved even in training. The shift towards LLMs means in fact a higher likelihood of bias, since low-resource languages constitute smaller (and thus less diverse) training data. Labor-wise, the rise of LLMs for moderation has meant a shift from vision-related annotation tasks towards hiring workers with physics and coding backgrounds to improve code generation models. 
 
@@ -110,35 +100,37 @@ Closely related, the ***Platform Dependencies*** panel continued the discussions
 
 The panel revealed how these dependencies manifest in multiple domains. In content moderation, coordinated deplatforming efforts remain ineffective because of cross-platform dependencies; only formal state intervention would bypass these structural constraints. Legally,  it was found that the DSA's law-making process was subject to a “governance by emulation”, in the sense that a small team of Commission officials were heavily reliant on external expertise and vulnerable to industry capture through rhetorical claims about what is “impossible to regulate.” Yet the panel also offered cautiously optimistic conclusions: the institutionalization of public law thinking within private governance structures, while currently weak, may provide a foundation for future reform on a 20-30 year timeline. 
 
-### Discursive and normative foundations of governance.
+**Discursive and normative foundations of governance.**
 
-Finally, through a panel on ***Discourse about Platform Governance***, we drew attention to the narratives (?) about governance itself. Several papers examined how concepts such as risk, innovation, safety are frequently used across policy documents, corporate communication, and public debate, but actually shape our understanding of *who defines the problems platform governance is meant to solve, and whose interests those definitions ultimately serve.*
+Finally, through a panel on ***Discourse about Platform Governance***, we drew attention to the narratives about governance itself. Several papers examined how concepts such as risk, innovation, safety are frequently used across policy documents, corporate communication, and public debate, but actually shape our understanding of *who defines the problems platform governance is meant to solve, and whose interests those definitions ultimately serve.*
 
 Research on the AI Act, for example, revealed how the idea of innovation functions as a somewhat empty signifier, while simultaneously serving as a vector of techno-optimism that tends to see regulation as obstacles to progress. This did not prevent EU policy experts from expressing deep concern about rapid regulatory backsliding, with American companies becoming increasingly sophisticated at European lobbying and pressures mounting to dilute the DSA, DMA, and AI Act in the name of competitiveness. 
 
 The panel also discussed how far-right actors tend to appropriate rights-based discourses and free speech rhetoric without long-term commitment to those values, as was demonstrated in the case of X’s takeover. The findings underscore how the very language of platform governance becomes contested terrain where corporate interests, political movements, and regulatory ambitions struggle to define whose problems matter and what solutions are deemed possible or impossible.
 
-## New realities in platform governance 
+As these ongoing debates make clear, platform governance today is shaped as much by contested narratives and political pressures as by the infrastructures that translate them into practice. The next section turns to the new realities through which platform governance is increasingly enacted.
 
-### Artificial intelligence has moved from being an object of platform governance to becoming a modality through which governance itself operates.
+## **New realities in platform governance**
 
-This shift was most explicit in the panel ***AI Governance***, where discussions foregrounded the integration of AI systems into content moderation, recommendation, and labor management. Generative AI governance emerged as a particularly salient concern: alignment processes were shown to embed normative assumptions about online discourse, often reproducing someexisting social hierarchies rather than neutralizing them. At the same time, several contributions emphasized the infrastructural politics underpinning AI governance. Concentration in cloud computing and AI defense sectors highlighted how access to computational resources conditions who can meaningfully build, deploy, and govern AI systems at scale. 
+**Artificial intelligence has moved from being an object of platform governance to becoming a modality through which governance itself operates**. 
 
-### New objects and logics of moderation
+This shift was most explicit in the panel ***AI Governance***, where discussions foregrounded the integration of AI systems into content moderation, recommendation, and labor management. Generative AI governance emerged as a particularly salient concern: alignment processes were shown to embed normative assumptions about online discourse, often reproducing some social hierarchies. At the same time, several contributions emphasized the infrastructural politics underpinning AI governance. Concentration in cloud computing and AI defense sectors highlighted how access to computational resources conditions who can meaningfully build, deploy, and govern AI systems at scale. 
 
-While content moderation has long been central to platform governance research, the 2025 conference demonstrated a clear expansion in both *where* moderation takes place and *how* it is conceived. The panel ***New Objects of Moderation*** articulates most directly, which foregrounded how generative AI systems, agentic accounts, and synthetic media challenge assumptions about what content moderation objects look like. Moving awayRather from singular pieces of contentthan treating content as a stable and isolable object, discussions emphasized the mechanisms that circulate content at scale, complicating attribution and enforcement.
+**New objects and logics of moderation**. 
 
-At the same time, the panel ***Beyond Content Governance*** featureds a spatial turn in trust and safety research. Papers examining Social XR and virtual environments raised questions about how moderation operates in immersive, embodied settings, and how public sector actors might engage in such spaces while remaining compliant with existing regulatory frameworks. Instead of interpreting moderation as a speech intervention, the discussions emphasized proximity, presence, and spatial interaction as new challenges.
+While content moderation has long been central to platform governance research, the 2025 conference demonstrated a clear expansion in both *where* moderation takes place and *how* it is conceived. The panel ***New Objects of Moderation*** articulates most directly, which foregrounded how generative AI systems, agentic accounts, and synthetic media challenge assumptions about what content moderation objects look like. Moving away from singular pieces of content, the discussions also pointed to a shift among major social media platforms from moderation at the level of individual posts toward actor- and behavior-based moderation. This shift foregrounds the mechanisms through which content circulates at scale, while simultaneously risking complicating attribution, responsibility, and enforcement.
+
+At the same time, the panel ***Beyond Content Governance*** featured a spatial turn in trust and safety research. Papers examining Social XR and virtual environments raised questions about how moderation operates in immersive, embodied settings, and how public sector actors might engage in such spaces while remaining compliant with existing regulatory frameworks. Instead of interpreting moderation as a speech intervention, the discussions emphasized proximity, presence, and spatial interaction as new challenges.
 
 More significantly, several panels moved away from centralized content removal toward bottom-up and community-driven approaches to content governance. In particular, discussions in ***Community-Driven Governance*** and ***Prosocial Moderation*** foregrounded moderation as a mediating and constructive practice, rather than a (purely) prohibitive and adjudicative one. Especially in the context of federated social media, governance was framed as a distributed process involving users, communities, and designers, with particular attention to prosocial design strategies aimed at fostering dialogue and bridging polarization as an important driver of “harmful” content.
 
-### Emerging institutional arrangements.
+**Emerging institutional arrangements.** 
 
 Beyond formal legislation, the conference devoted attention to how authority and accountability in platform governance are being reconfigured through emerging institutional arrangements. Rather than assuming a clear division between state regulations and platform’s self-governance, discussions in the ***Authority and Accountability*** panel examined the dialectic relationships between platforms and states, as well as the alignment with other regulatory intermediaries and technical systems.
 
 In the meantime, there are increasing discussions around designing ***Public Service (Social) Media*** that seek to reclaim platform infrastructures for public interest. These contributions revisited public service media traditions under the era of platformization, focusing on questions of ownership, sustained business models, and democratic accountability. They emphasized how public service social media initiatives hold the potential to challenge dominant platform business models by emphasizing inclusion and collective governance, while having to confront structural constraints such as scale, funding, and dependence on commercial infrastructures. 
 
-### Lastly and unavoidably, a shifting political climate.
+**Lastly and unavoidably, a shifting political climate.**
 
 Many discussions were shaped by an increasingly fraught (geo-)political context in which platform governance unfolds. 
 
@@ -146,11 +138,11 @@ The panels ***The Politics of Big Tech*** and ***Governmentality*** positioned p
 
 The panel ***Politics and Conflicts*** situated platform governance within contexts of political crises, including elections, wartime, and extremely polarized communication environment. We heard case studies of platforms’ involvement in ongoing political conflicts, alongside analyses of platform responses to disinformation and political pressure, which highlighted how governance decisions are increasingly entangled with unresolved political struggles. Discussions also addressed the rise and growing normalization of “alt-tech” ecosystems, which shows the increasing distrust in mainstream platforms and parallel infrastructures that challenge these dominant governance models.
 
-## Transitions
+## **Transitions**
 
 Transition points in the larger history of platform governance emerge from these discussions. 
 
-### The first is a question of infrastructure.
+**One is a question of infrastructure.** 
 
 Decentralisation, composable architectures, as well as a more diverse array of “alt-tech” platforms fragment platform markets and create new governance interventions.
 
@@ -158,18 +150,20 @@ This fragmentation opens the field to a wider range of actors (community moderat
 
 We have seen how this reconfiguration enables new forms of community-based moderation, negotiated norms, and context-sensitive enforcement, while also creating space for public actors to introduce standards through regulation and for grassroots actors to propose alternative designs.
 
-### The second is a question of literacy.
+**The second is a question of information asymmetry.**
 
 We face a persistent “governance gap”: the capacity of workers, users, researchers, and public actors to operationalise their demands and values within the infrastructures that govern their sectors.
 
 This raises questions of training, education, and institutional support: how do we foster the skills required to translate normative claims into technical and organizational forms, and how do we sustain collaboration across disciplinary, professional, and political boundaries?
 
-### As such, the third is a question of research.
+**As such, the third is a question of research.**
 
 Discussing the nature, implications and executions of platform governance inevitably lends to  description or critical research. We describe who is involved in governance and how. We critique the ways in which governance falls short across these actors. 
 
-Yet, we often shy away from proactive propositions. We may mark a step beyond ethical, normative or other critique and towards a form of ethics: *how else* governance may be done. This does not need to land on simple solutionism, but on deliberation around concepts, frameworks and protocols of how else to do governance in a given sector. 
+Yet, we often shy away from proactive propositions. We may mark a step beyond normative or other critique and towards a form of ethics: *how else* governance may be done. This does not need to land on simple solutionism, but on deliberation around applicable concepts, frameworks and protocols. 
 
 This entails continued interdisciplinary work that is uncomfortable (technically, politically, and methodologically) but necessary to grasp governance as it is enacted across code, law, labor, and discourse.
 
-Methodological innovation becomes central here: the development of tools, workflows, datasets, and collaborative research practices.
+## **Funding acknowledgement**
+
+The 2025 PlatGovNet conference was supported by the Danish National Research Foundation grant DNRF197 for the project “Power over platforms?
