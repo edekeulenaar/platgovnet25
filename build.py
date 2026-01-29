@@ -98,17 +98,13 @@ def build_html():
     parts = md_content.split('# PlatGovNet2025 Summary')
     menu_section = parts[0]
     summary_section = '# PlatGovNet2025 Summary' + parts[1]
-    
-    # Extract menu
-    menu_data = {'2021': '', '2023': '', '2025': ''}
-    current_year = None
-    for line in menu_section.split('\n'):
-        if line.startswith('## '):
-            current_year = line.replace('## ', '').strip()
-        elif line.strip() and current_year and current_year in menu_data:
-            if menu_data[current_year]:
-                menu_data[current_year] += ' '
-            menu_data[current_year] += line.strip()
+
+    # Hardcoded year summaries (these don't change frequently)
+    menu_data = {
+        '2021': '',
+        '2023': 'Since the onset of the COVID-19 pandemic, the global reliance on the services provided by a range of major online platform companies has skyrocketed. Online marketplaces, social networks, cloud providers, streaming services, and service delivery platforms all rake in record and increasing profits as they continue to embed themselves ever more deeply into public and private life. At the same time, dissatisfaction with the platform economy status quo is growing internationally. Across policy areas like content moderation, competition, labor law, and data protection, governments around the world are developing new rules to tackle troubling forms of outsized political, cultural, and infrastructural platform power.',
+        '2025': 'A changing mix of competing platform companies faced with various efforts to regulate, influence, or control them and their offers has become an ever more central feature of many societies. Monolithic services begin to fracture and decentralized platform infrastructures emerge. Some governments assert their power and authority through the agenda of "digital sovereignty". New constellations of actors emerge and tensions manifest across state, market, and civil society. We witness realignments in the political economy of platforms and societies.'
+    }
     
     # REPLACE PANEL MARKERS BEFORE PROCESSING MARKDOWN
     # Create mapping of lowercase panel names to actual CSV panel names for 2025
@@ -136,21 +132,43 @@ def build_html():
     # Process summary to HTML
     def process_line(line):
         line = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', line)
-        line = re.sub(r'\*([^\*]+)\*', r'<em>\1</em>', line)
+        # Process bold (**text**) first, before single asterisks
         line = re.sub(r'\*\*([^\*]+)\*\*', r'<strong>\1</strong>', line)
+        # Single asterisks (*text*) should also be bold (per user request)
+        line = re.sub(r'\*([^\*]+)\*', r'<strong>\1</strong>', line)
         return line
     
+    # Extract headings for sidebar navigation
+    headings = []
+    heading_counter = 0
+
     html_lines = []
     for line in summary_section.split('\n'):
         line = line.strip()
         if not line:
             continue
         if line.startswith('# '):
-            html_lines.append(f'<h2>{process_line(line[2:])}</h2>')
+            heading_counter += 1
+            heading_id = f'heading-{heading_counter}'
+            heading_text = process_line(line[2:])
+            # Remove any HTML tags for the plain text version
+            plain_text = re.sub(r'<[^>]+>', '', heading_text)
+            headings.append({'id': heading_id, 'text': plain_text, 'level': 1})
+            html_lines.append(f'<h2 id="{heading_id}">{heading_text}</h2>')
         elif line.startswith('## '):
-            html_lines.append(f'<h3>{process_line(line[3:])}</h3>')
+            heading_counter += 1
+            heading_id = f'heading-{heading_counter}'
+            heading_text = process_line(line[3:])
+            plain_text = re.sub(r'<[^>]+>', '', heading_text)
+            headings.append({'id': heading_id, 'text': plain_text, 'level': 2})
+            html_lines.append(f'<h3 id="{heading_id}">{heading_text}</h3>')
         elif line.startswith('### '):
-            html_lines.append(f'<h4>{process_line(line[4:])}</h4>')
+            heading_counter += 1
+            heading_id = f'heading-{heading_counter}'
+            heading_text = process_line(line[4:])
+            plain_text = re.sub(r'<[^>]+>', '', heading_text)
+            headings.append({'id': heading_id, 'text': plain_text, 'level': 3})
+            html_lines.append(f'<h4 id="{heading_id}">{heading_text}</h4>')
         else:
             html_lines.append(f'<p>{process_line(line)}</p>')
     
@@ -168,6 +186,9 @@ def build_html():
     # Escape for JavaScript embedding
     summary_escaped = summary_html.replace('\\', '\\\\').replace('`', '\\`').replace('$', '\\$')
     themes_json = json.dumps(sorted(all_themes))
+    headings_json = json.dumps(headings)
+
+    print(f"Extracted {len(headings)} headings for sidebar navigation")
     
     print("Building HTML...")
     
@@ -205,10 +226,13 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 .tooltip .tooltip-presentation{{display:block;font-size:0.95em;opacity:0.9}}
 .dot:hover .tooltip{{opacity:1}}
 .summary-container{{position:relative;margin-top:60px}}
-.floating-sidebar{{position:fixed;left:30px;top:50vh;transform:translateY(-50%);width:200px;opacity:0;transition:opacity 0.3s;height:fit-content;max-height:80vh;overflow-y:auto}}
-.floating-sidebar.visible{{opacity:1}}
-.floating-sidebar .sidebar-panel{{padding:8px 0;cursor:pointer;color:#2c5aa0;font-size:0.9em;border-bottom:1px solid #f0f0f0;transition:all 0.2s}}
-.floating-sidebar .sidebar-panel:hover{{padding-left:5px;background:#f5f5f5}}
+.floating-sidebar{{position:fixed;left:15px;top:120px;width:230px;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;max-height:calc(100vh - 140px);overflow-y:auto;z-index:9999;background:#fff;padding:12px;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.15);border:1px solid #ccc}}
+.floating-sidebar.visible{{opacity:1;visibility:visible}}
+.floating-sidebar .sidebar-item{{padding:8px 4px;cursor:pointer;color:#2c5aa0;font-size:0.9em;border-bottom:1px solid #f0f0f0;transition:all 0.2s;line-height:1.4}}
+.floating-sidebar .sidebar-item:hover{{padding-left:8px;background:#f5f5f5}}
+.floating-sidebar .sidebar-item.level-1{{font-weight:600;font-size:1em}}
+.floating-sidebar .sidebar-item.level-2{{padding-left:10px;font-size:0.9em}}
+.floating-sidebar .sidebar-item.level-3{{padding-left:20px;font-size:0.85em;font-style:italic}}
 .summary-main{{max-width:800px}}
 .summary-section{{margin-top:0}}
 .summary-section h2{{font-size:1.8em;margin-bottom:20px;font-weight:600}}
@@ -232,7 +256,7 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 </style>
 </head><body>
 <h1>PlatGovNet, then and now</h1>
-<div class="filter-section"><strong>Filter by theme (applies to all years):</strong><div id="global-themes"></div></div>
+<div class="filter-section"><strong>Filter by theme:</strong><div id="global-themes"></div></div>
 <div class="conference-map">
 <div class="year-section"><div class="year-left"><div class="year-header">2021</div><div class="year-summary">{menu_data['2021']}</div></div><div class="year-right"><div class="panels-grid" id="panels-2021"></div></div></div>
 <div class="year-section"><div class="year-left"><div class="year-header">2023</div><div class="year-summary">{menu_data['2023']}</div></div><div class="year-right"><div class="panels-grid" id="panels-2023"></div></div></div>
@@ -246,6 +270,7 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 // Data is already parsed by Python and embedded as JSON
 const dataByYear={data_json};
 const allThemes={themes_json};
+const sidebarHeadings={headings_json};
 
 // Render theme filters
 const globalThemesContainer=document.getElementById('global-themes');
@@ -258,17 +283,17 @@ function toggleGlobalTheme(theme,el){{const panels=document.querySelectorAll('.p
 
 function setupPanelLinks(){{const links=document.querySelectorAll('.panel-link');links.forEach(link=>{{const panelName=link.dataset.panel;const panel2025=dataByYear['2025']?dataByYear['2025'][panelName]:null;if(panel2025){{const div=document.createElement('div');div.className='panel-participants';panel2025.presentations.forEach(pres=>{{const item=document.createElement('div');item.className='participant-item';const name=document.createElement('span');name.className='participant-name';name.textContent=pres.person;const pres2=document.createElement('span');pres2.className='participant-presentation';pres2.textContent=pres.presentation;item.appendChild(name);item.appendChild(pres2);div.appendChild(item)}});link.appendChild(div)}}link.onclick=(e)=>{{e.preventDefault();const el=document.querySelector(`[data-panel="${{panelName}}"][data-year="2025"]`);if(el){{el.scrollIntoView({{behavior:'smooth',block:'center'}});el.style.background='#fff8dc';setTimeout(()=>el.style.background='',2000)}}}}}})}}
 
-function setupFloatingSidebar(){{const sidebar=document.getElementById('floating-sidebar');const sidebarPanels=document.getElementById('sidebar-panels');const summarySection=document.getElementById('summary-2025');const panels2025=dataByYear['2025'];if(!panels2025)return;Object.keys(panels2025).forEach(panelName=>{{const div=document.createElement('div');div.className='sidebar-panel';div.textContent=panelName;div.onclick=()=>{{const links=document.querySelectorAll(`.panel-link[data-panel="${{panelName.toLowerCase()}}"]`);if(links[0]){{links[0].scrollIntoView({{behavior:'smooth',block:'center'}});links[0].style.background='#fff8dc';setTimeout(()=>links[0].style.background='',2000)}}}};sidebarPanels.appendChild(div)}});const observer=new IntersectionObserver(entries=>{{entries.forEach(entry=>{{if(entry.isIntersecting)sidebar.classList.add('visible');else sidebar.classList.remove('visible')}})}},{{threshold:0.1}});observer.observe(summarySection)}}
+function setupFloatingSidebar(){{const sidebar=document.getElementById('floating-sidebar');const sidebarPanels=document.getElementById('sidebar-panels');const summarySection=document.getElementById('summary-2025');if(!sidebarHeadings||sidebarHeadings.length===0)return;sidebarHeadings.forEach(heading=>{{const div=document.createElement('div');div.className=`sidebar-item level-${{heading.level}}`;div.textContent=heading.text;div.onclick=()=>{{const el=document.getElementById(heading.id);if(el){{el.scrollIntoView({{behavior:'smooth',block:'start'}});el.style.background='#fff8dc';setTimeout(()=>el.style.background='',2000)}}}};sidebarPanels.appendChild(div)}});function checkSidebarVisibility(){{const rect=summarySection.getBoundingClientRect();const inView=rect.top<window.innerHeight&&rect.bottom>0;if(inView)sidebar.classList.add('visible');else sidebar.classList.remove('visible')}};window.addEventListener('scroll',checkSidebarVisibility);window.addEventListener('resize',checkSidebarVisibility);checkSidebarVisibility()}}
 
 renderYear('2021');renderYear('2023');renderYear('2025');setupPanelLinks();setupFloatingSidebar();
 </script>
 </body></html>'''
     
     # Write HTML
-    with open('platgovnet_conference.html', 'w', encoding='utf-8') as f:
+    with open('index.html', 'w', encoding='utf-8') as f:
         f.write(html)
-    
-    print("\n✓ SUCCESS! platgovnet_conference.html has been regenerated")
+
+    print("\n✓ SUCCESS! index.html has been regenerated")
     print(f"✓ Embedded data for {total_panels} panels")
     print(f"✓ Embedded {len(summary_html)} chars of summary HTML")
     print(f"✓ Found {len(panel_markers)} linked panels in text")
