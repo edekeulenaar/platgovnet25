@@ -35,14 +35,14 @@ Year;Panel;theme;Person;Presentation
 2021;empirical methods;methods;Jef Ausloos;Transparency Rules and Data Rights for Platform Research
 2021;empirical methods;methods;Elizabeth Meehan, Rebekah Tromble and Claes de Vreese;Beyond Algorithmic Auditing: The Need for Independent Policy and Data Pipeline Audits as Mechanisms for Platform Accountability
 2021;empirical methods;methods;Angela Xiao Wu;Repurposing Platform Trace Data for (Transnational) Academic Social Science
-2021;governing toxicity;;Kaiping Chen and Lindsey Middleton;Policing or Pandering Misinformation: A Cross-Platform Moderation Policy Analysis
-2021;governing toxicity;;Bharath Ganesh;Platform Racism and the Governance of Right-Wing Extremism
-2021;governing toxicity;;Anna Reepschlager and Elizabeth Dubois;How Harassment and Hate Speech Policies Have Evolved Over Time: Comparing Facebook, Twitter and Reddit
-2021;governing toxicity;;Julia R. DeCook, Kelley Cotter and Shaheen Kanthawala;Safe From “Harm”: The Governance of Violence by Platforms
-2021;platform governance with Chinese characteristics;;Sruthi Kalyani A;If the Heaven is High, Can the Emperor be Far Away? – Platform Affordances, Immunity, and State Control with Chinese Characteristics
-2021;platform governance with Chinese characteristics;;Yidong Wang;Platform Regulation of Sex and Desire: Content Ecology of Queer Media in China
-2021;platform governance with Chinese characteristics;;Fan Yang;Censorship and Content Moderation in Layers: Investigating Chinese-Australian Media Worker Practices on News-Focused WeChat Official Accounts
-2021;platform governance with Chinese characteristics;;Angela Zhang;Decentralizing Platform Governance: Lawlessness, Fraud and Innovation
+2021;governing toxicity;content governance;Kaiping Chen and Lindsey Middleton;Policing or Pandering Misinformation: A Cross-Platform Moderation Policy Analysis
+2021;governing toxicity;content governance;Bharath Ganesh;Platform Racism and the Governance of Right-Wing Extremism
+2021;governing toxicity;content governance;Anna Reepschlager and Elizabeth Dubois;How Harassment and Hate Speech Policies Have Evolved Over Time: Comparing Facebook, Twitter and Reddit
+2021;governing toxicity;content governance;Julia R. DeCook, Kelley Cotter and Shaheen Kanthawala;Safe From “Harm”: The Governance of Violence by Platforms
+2021;platform governance with Chinese characteristics;global platform governance;Sruthi Kalyani A;If the Heaven is High, Can the Emperor be Far Away? – Platform Affordances, Immunity, and State Control with Chinese Characteristics
+2021;platform governance with Chinese characteristics;global platform governance;Yidong Wang;Platform Regulation of Sex and Desire: Content Ecology of Queer Media in China
+2021;platform governance with Chinese characteristics;global platform governance;Fan Yang;Censorship and Content Moderation in Layers: Investigating Chinese-Australian Media Worker Practices on News-Focused WeChat Official Accounts
+2021;platform governance with Chinese characteristics;global platform governance;Angela Zhang;Decentralizing Platform Governance: Lawlessness, Fraud and Innovation
 2023;regulated platform work;labour;Soujanya Sridharan and Gautam Misra;Alternate Mechanisms for Labour Organisation and Collective Bargaining in the Gig Economy
 2023;regulated platform work;labour;Anushka Mittal;Working in the Shadow of the Platform and the Law
 2023;regulated platform work;labour;Luis Hernando Lozano Paredes;Recognising Alternative Platform Governance and Emergent Design: the Case of Drivers Club Bogotá
@@ -52,9 +52,9 @@ Year;Panel;theme;Person;Presentation
 2023;media and platform policy;policy;Brenda Dvoskin;Media Giants, the Public Interest, and Civil Society
 2023;media and platform policy;policy;Sacha Molitorisz and Michael Davis;An Opaque and Qualified Success: a Review of Australia’s World-First News Media Bargaining Code
 2023;media and platform policy;policy;Angela Xiao Wu;On Infrastructural Monopoly: From China’s Media Reform to Chinese Platform Governance
-2023;justice in platform governance;;Amy Hasinoff;A Restorative and Transformative Justice Model for Platform Governance: the Case of Image-based Sexual Abuse
-2023;justice in platform governance;;Moritz Schramm;Emulated Guardians — Can the Oversight Board and the DSA’s Out-of-Court Dispute Settlement Bodies Control Platform Power?
-2023;justice in platform governance;;Carolina Are;Dysfunctional’ Appeals and Failures of Algorithmic Justice in Instagram and TikTok Content Moderation
+2023;justice in platform governance;regulation;Amy Hasinoff;A Restorative and Transformative Justice Model for Platform Governance: the Case of Image-based Sexual Abuse
+2023;justice in platform governance;regulation;Moritz Schramm;Emulated Guardians — Can the Oversight Board and the DSA’s Out-of-Court Dispute Settlement Bodies Control Platform Power?
+2023;justice in platform governance;regulation;Carolina Are;Dysfunctional’ Appeals and Failures of Algorithmic Justice in Instagram and TikTok Content Moderation
 2023;empirical research;methods;Jef Ausloos, Pierre Dewitte and Cristiana Teixeira Santos;The Operationalisation of Data Access Rights in Platform Governance: Data Protection Rights as a Cautionary Tale
 2023;empirical research;methods;Tyler Quick;Marxian Political Economy and Qualitative Platform Study
 2023;empirical research;methods;Charlotte Spencer-Smith;Algorithmic Reach Reduction: Platform Accounts of Motivations, Implementation, and Effects
@@ -79,12 +79,12 @@ Year;Panel;theme;Person;Presentation
 2023;health and sexuality;;Lisa Garwood-Cross and Ben Light;Sexual Content? Sex Education in the Crossfire of Social Media Platform Governance
 2023;health and sexuality;;Martin Johannes Riedl, Zelly Martin, and Samuel Woolley;“I Think Our system is Very Skewed When it Comes to Censorship”: Pro- and Anti-abortion Rights Activists’ Imaginaries of Platform Governance
 2023;health and sexuality;;Lucinda Nelson and Nicolas Suzor;Moderating Misogyny: Bridging the Gap Between Feminist Theory and the Policies and Practices of Social Media Platforms
-2023;AI & platform governance;AI;Gabriel Nicholas;Hate, in a Thousand Languages: Evaluating Social Media Companies’ Claims About the Multilinguality of Large Language Models
-2023;AI & platform governance;AI;Tobias Eberwein, Krisztina Rozgonyi, and Florian Saurwein;From Liability to Responsibility and Risk Management: Public Discourses on AI and Algorithmic Platform Governance
-2023;AI & platform governance;AI;Renana Keydar, Noa Mor, Yuval Shany, and Omri Abend;Too Good To Be Rule: AI’s Transformative Impact on Content Moderation Regulation in the Mirror of the Rules/Standards Distinction
-2023;understanding platformed work;platform labour;Julian Posada;Navigating Digital Currencies: The Experiences of Latin American Workers with Digital Currency
-2023;understanding platformed work;platform labour;Giulia Varaschin, Jonas Valente and Alessio Bertolini, Balaji Parthasarathy, Amela Kurta, Mark Graham and Adam Badger, Pablo Aguera Reneses;Asset-light for Whom? Economic Governance of Digital Labour Platforms and Its Effects on Working Conditions
-2023;understanding platformed work;platform labour;Atieh Razavi Yekta;The Platform Economy’s Worker Classification Dilemma
+2023;AI & platform governance;AI governance;Gabriel Nicholas;Hate, in a Thousand Languages: Evaluating Social Media Companies’ Claims About the Multilinguality of Large Language Models
+2023;AI & platform governance;AI governance;Tobias Eberwein, Krisztina Rozgonyi, and Florian Saurwein;From Liability to Responsibility and Risk Management: Public Discourses on AI and Algorithmic Platform Governance
+2023;AI & platform governance;AI governance;Renana Keydar, Noa Mor, Yuval Shany, and Omri Abend;Too Good To Be Rule: AI’s Transformative Impact on Content Moderation Regulation in the Mirror of the Rules/Standards Distinction
+2023;understanding platformed work;labour;Julian Posada;Navigating Digital Currencies: The Experiences of Latin American Workers with Digital Currency
+2023;understanding platformed work;labour;Giulia Varaschin, Jonas Valente and Alessio Bertolini, Balaji Parthasarathy, Amela Kurta, Mark Graham and Adam Badger, Pablo Aguera Reneses;Asset-light for Whom? Economic Governance of Digital Labour Platforms and Its Effects on Working Conditions
+2023;understanding platformed work;labour;Atieh Razavi Yekta;The Platform Economy’s Worker Classification Dilemma
 2023;content governance;content governance;Catalina Goanta, Giovanni De Gregorio and Mateusz Grochowski;One Law to Rule Them All: Comparing Terms of Service on Social Media Platforms Across Regulatory Spaces
 2023;content governance;content governance;Dennis Redeker;What Do Users Think About Platform Content Moderation? Empirical Evidence about Trust in “Alternative Governors” of Online Speech
 2023;content governance;content governance;Fan Yang;The Patchwork of Platform Governance: WeChat as a Case Study
@@ -92,18 +92,18 @@ Year;Panel;theme;Person;Presentation
 2023;ruling the fediverse;the fediverse;Darius Kazemi;Where “Platform” Fails Us: New Approaches to the Study of the Fediverse
 2023;ruling the fediverse;the fediverse;Patricia Aufderheide and Adrienne Massanari, Robert Gehl and Aram Sinnreich;Fool Me Twice: (How) Can We Prevent the Fediverse From Sucking?
 2023;ruling the fediverse;the fediverse;Shagun Jhaver, Seth Frey and Amy Zhang;Decentralizing Platform Power: a Design Space of Multi-level Governance in Online Social Platforms
-2025;authority and accountability;;Matheus Luiz Franco Guedes da Silva;Infrastructure Politics and Delegated Regulation: Platform Governance and the Erosion of Democratic Accountability
+2025;authority and accountability;regulation;Matheus Luiz Franco Guedes da Silva;Infrastructure Politics and Delegated Regulation: Platform Governance and the Erosion of Democratic Accountability
 2025;authority and accountability;;Elizabeth Farries and Eugenia Siapera;Intermediary platform safety mechanisms: The new regulatory actors tasked with realising the Digital Services Act
 2025;authority and accountability;;Simran Agarwal and Diyi Liu;Theorising Governance Through Platforms: Recentering the Role of the State
 2025;authority and accountability;;Danielle Flonk and Kevin Garvey;Alignment of digital platforms:  How users, sponsors, and governments bring about design change
-2025;new objects of moderation;;Natalia Stanusch, Martin Degeling, Salvatore Romano, Raziye Buse Çetin, Miazia Schüler and Silvia Semenzin;Prompt, Upload, Repeat: The Clutched Entanglement of Platform Economy and Governance in the Face of Agentic AI Accounts
-2025;new objects of moderation;;Christian Katzenbach, Kim Ermler and Luisa Runge;Content Moderation, Next Level? Emergence of Platform Governance from Social Media to Generative AI
-2025;new objects of moderation;;Irma Garnesia and Ross Tapsell;The True Cost of Gendered Disinformation: How Platform Governance Enables Online Gender-Based Violence in Indonesia
-2025;new objects of moderation;;Jeffrey Howard, Conor Sanchez;Beyond Content-Based Enforcement
-2025;AI governance;AI;Charlotte Spencer-Smith, Ricarda Drüeke and Corinna Peil;Governing Discourse: Gender, Alignment and the Normativity of Generative AI
-2025;AI governance;AI;Joscha Abels and Silvia Weko;The iron law of tech oligarchy: Technological capital and infrastructural power in the cloud and AI-defense sector
-2025;AI governance;AI;Kelsey Cameron;"""Policing Platform Governance: The Rise and Fall of Axon’s AI Ethics Board"""
-2025;AI governance;AI;Noa Mor;Governing Publicly Available Information within Social Media Ecosystems
+2025;new objects of moderation;content governance;Natalia Stanusch, Martin Degeling, Salvatore Romano, Raziye Buse Çetin, Miazia Schüler and Silvia Semenzin;Prompt, Upload, Repeat: The Clutched Entanglement of Platform Economy and Governance in the Face of Agentic AI Accounts
+2025;new objects of moderation;content governance;Christian Katzenbach, Kim Ermler and Luisa Runge;Content Moderation, Next Level? Emergence of Platform Governance from Social Media to Generative AI
+2025;new objects of moderation;content governance;Irma Garnesia and Ross Tapsell;The True Cost of Gendered Disinformation: How Platform Governance Enables Online Gender-Based Violence in Indonesia
+2025;new objects of moderation;content governance;Jeffrey Howard, Conor Sanchez;Beyond Content-Based Enforcement
+2025;AI governance;AI governance;Charlotte Spencer-Smith, Ricarda Drüeke and Corinna Peil;Governing Discourse: Gender, Alignment and the Normativity of Generative AI
+2025;AI governance;AI governance;Joscha Abels and Silvia Weko;The iron law of tech oligarchy: Technological capital and infrastructural power in the cloud and AI-defense sector
+2025;AI governance;AI governance;Kelsey Cameron;"""Policing Platform Governance: The Rise and Fall of Axon’s AI Ethics Board"""
+2025;AI governance;AI governance;Noa Mor;Governing Publicly Available Information within Social Media Ecosystems
 2025;platform labor and political economy;labour;Rohan Grover;The Industrialization of Platform Governance
 2025;platform labor and political economy;labour;Özgür Yılmaz;Clientelism and Digital Subcontracting in Platform Governance: Paid Subscribers as Intermediaries in the New Political Economy of Streaming
 2025;platform labor and political economy;labour;Sohini Banerjee;Governing Domestic Work by Design: Interface Logics, Algorithmic Management, and Worker Agency in India’s Maid-on-Demand Platforms
@@ -120,18 +120,18 @@ Year;Panel;theme;Person;Presentation
 2025;the politics of big tech;;Mai Van Tran, Tom Willaert, Lewis Young and Haymarn Soe Nyunt;How Big Tech Reward Authoritarian Actors’ Algorithmic Adaptations: A Mixed Methods Analysis of Myanmar Social Media
 2025;the politics of big tech;;Yasmin Curzi and Jess Reia;Bargaining Rights: Mapping the Advancement of a Neoconservative Agenda in Platform Governance
 2025;the politics of big tech;;Juan Ortiz Freuler;Infrastructural Sovereignty and the New Geography of Media Dependency: A Digital Infrastructure Analysis of Latin American News Ecosystems
-2025;beyond content governance;;Dennis Redeker, Nikolas Pfannenschmidt, Manuel Baron Romero, Gabriel Durán and Ana Sofie Villa Hernandez;Trust and Safety in Social XR: Mapping the Spatial Turn in Content Moderation
-2025;beyond content governance;;Phylicia Babb, Stratos Baloutsos, Ariana Polyviou and Polyxeni Vassilakopoulou;Metaverse Governance and Compliance for Public Sector Participation
-2025;beyond content governance;;Leo Cao;From platform governance to institutional practice: experimentation, misalignment, and contingent adoption of Google Arts & Culture
-2025;beyond content governance;;Taylor Annabell, Thales Bertaglia and Catalina Goanta;Recommending search & search recommendations: Governance of search products on social media platforms
+2025;beyond content governance;content governance;Dennis Redeker, Nikolas Pfannenschmidt, Manuel Baron Romero, Gabriel Durán and Ana Sofie Villa Hernandez;Trust and Safety in Social XR: Mapping the Spatial Turn in Content Moderation
+2025;beyond content governance;content governance;Phylicia Babb, Stratos Baloutsos, Ariana Polyviou and Polyxeni Vassilakopoulou;Metaverse Governance and Compliance for Public Sector Participation
+2025;beyond content governance;content governance;Leo Cao;From platform governance to institutional practice: experimentation, misalignment, and contingent adoption of Google Arts & Culture
+2025;beyond content governance;content governance;Taylor Annabell, Thales Bertaglia and Catalina Goanta;Recommending search & search recommendations: Governance of search products on social media platforms
 2025;auditing the DSA;regulation;Felix Blommaert;An architectural flaw? Uncovering the DSA’s unstable legitimacy foundation
 2025;auditing the DSA;regulation;John Albert;What Are DSA Audits Good For? Lessons From the First Cycle of Article 37 Reports
 2025;auditing the DSA;regulation;Bruno Mattos, Débora Salles and R. Marie Santini;Regulating Platform Opacity: Assessing Content Moderation Transparency Through Voluntary and DSA-Mandated Reports
 2025;auditing the DSA;regulation;Eline L. Leijten;Treasure trove or castle in the sky? A critical assessment of the DSA Transparency Database and its effectiveness in enabling scrutiny over content moderation decisions
-2025;global content moderation;;Volha Kananovich, Javie Ssozi, Brian Ekdale, Katy Biddle, Sang Jung Kim, Ryan Stoldt and Raven Maragh-Lloyd;“Someone Has To Keep Track of All This”:  Comparing Audience Perceptions of Platform Governance Strategies in the United States, Ukraine, and Kenya
-2025;global content moderation;;Mona Elswah, Aliya Bhatia and Dhanaraj Thakur;Tech Companies and Content Moderation: A Comparative Case Study Analysis of Four Languages in the Global Majority
-2025;global content moderation;;Julian Posada, Paola Tubaro and Maicol Quijano;How do platforms pay data workers? Insights from Remotasks Plus Venezuela
-2025;global content moderation;;Manuel Tonneau, Dylan Thurgood, Diyi Liu, Manoel Horta Ribeiro and Paul Röttger;Assessing global hate speech moderation on Twitter
+2025;global content moderation;global platform governance;Volha Kananovich, Javie Ssozi, Brian Ekdale, Katy Biddle, Sang Jung Kim, Ryan Stoldt and Raven Maragh-Lloyd;“Someone Has To Keep Track of All This”:  Comparing Audience Perceptions of Platform Governance Strategies in the United States, Ukraine, and Kenya
+2025;global content moderation;global platform governance;Mona Elswah, Aliya Bhatia and Dhanaraj Thakur;Tech Companies and Content Moderation: A Comparative Case Study Analysis of Four Languages in the Global Majority
+2025;global content moderation;global platform governance;Julian Posada, Paola Tubaro and Maicol Quijano;How do platforms pay data workers? Insights from Remotasks Plus Venezuela
+2025;global content moderation;global platform governance;Manuel Tonneau, Dylan Thurgood, Diyi Liu, Manoel Horta Ribeiro and Paul Röttger;Assessing global hate speech moderation on Twitter
 2025;platform dependencies;;Kilian Buehling, Joana D. Becker, Annett Heft and Xixuan Zhang;The trade-offs and consequences of banning hyperpartisan media across platforms – A supply and demand perspective
 2025;platform dependencies;;Martin Riedl;“Technological Modernization:” How the U.S. Federal Election Commission established political influencers on social media as a campaign tool
 2025;platform dependencies;;Ville Aula;Why did the EU legislate on trusted flaggers? Explaining government policy change and adoption of new policy instruments in platform governance
@@ -140,10 +140,10 @@ Year;Panel;theme;Person;Presentation
 2025;prosocial moderation;;Himanshu Panday and Hameeda Syed;Bunk With Kindness: Prosocial Platform Governance for Misinformation in Polarized Contexts
 2025;prosocial moderation;;Abhishek Ray and Cesar Martinelli;On the Mediating Role of Two-Sided Platforms
 2025;prosocial moderation;;Soham De, Ariel Procaccia, Max Nickel and Smitha Milli;Sortition for Platform Governance
-2025;sovereignty and platform power;;Juan Ortiz Freuler;Platform power and the return of the peripheries: Latin America’s non-aligned path to digital autonomy
-2025;sovereignty and platform power;;Vincent Obia;Mapping A Research Agenda for Digital Media Regulation in Africa: A Systematic Analysis
-2025;sovereignty and platform power;;Yasmin Curzi and André Ramiro;Technogeopolitics of extremism: Platforms’ regulation in Brazil and the sovereignty of democratic public institutions
-2025;sovereignty and platform power;;Silvia A. Carretta and Emmanuel Vargas Penagos;From Brussels to Bogotà: A Comparative Study of Digital Gender-Based Violence Regulations in the EU and Colombia
+2025;sovereignty and platform power;sovereignty;Juan Ortiz Freuler;Platform power and the return of the peripheries: Latin America’s non-aligned path to digital autonomy
+2025;sovereignty and platform power;sovereignty;Vincent Obia;Mapping A Research Agenda for Digital Media Regulation in Africa: A Systematic Analysis
+2025;sovereignty and platform power;sovereignty;Yasmin Curzi and André Ramiro;Technogeopolitics of extremism: Platforms’ regulation in Brazil and the sovereignty of democratic public institutions
+2025;sovereignty and platform power;sovereignty;Silvia A. Carretta and Emmanuel Vargas Penagos;From Brussels to Bogotà: A Comparative Study of Digital Gender-Based Violence Regulations in the EU and Colombia
 2025;governmentality;;Julian Morgan;Platform Governmentality: At the Boundaries of Imaginable Futures
 2025;governmentality;;Blue Miaoran Dong;Branding Private Interests as Public Good: Facebook and Google’s Three Phase Evolution
 2025;governmentality;;Pawel Popiel and Yoonmo Sang;Platform Governance as a Communicative Process
