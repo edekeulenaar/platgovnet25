@@ -252,16 +252,16 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 .panel-link:hover{{background:#f0f5ff}}
 .keynote-section{{background:#f9f9f9;padding:20px 25px;margin:30px 0;border-left:4px solid #2c5aa0}}
 .keynote-section p{{margin-bottom:12px}}
-/* Panel preview - fixed on right side */
-.panel-preview{{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:350px;max-height:70vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;overflow-y:auto}}
+/* Panel preview - centered on right side of content */
+.panel-preview{{position:fixed;right:50%;margin-right:-580px;top:50%;transform:translateY(-50%);width:350px;max-height:70vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;overflow-y:auto}}
 .panel-preview.visible{{opacity:1;visibility:visible}}
 .panel-preview-title{{font-weight:600;font-size:1.1em;margin-bottom:12px;color:#333;border-bottom:1px solid #eee;padding-bottom:8px}}
 .panel-preview .participant-item{{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f0f0}}
 .panel-preview .participant-item:last-child{{margin-bottom:0;padding-bottom:0;border-bottom:none}}
 .panel-preview .participant-name{{font-weight:600;display:block;margin-bottom:3px;color:#2c5aa0;font-size:0.95em}}
 .panel-preview .participant-presentation{{display:block;font-size:0.9em;color:#555;line-height:1.4}}
-/* External link preview - fixed on right side */
-.link-preview{{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:300px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s}}
+/* External link preview - centered on right side of content */
+.link-preview{{position:fixed;right:50%;margin-right:-580px;top:50%;transform:translateY(-50%);width:300px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s}}
 .link-preview.visible{{opacity:1;visibility:visible}}
 .link-preview-title{{font-weight:600;font-size:1em;margin-bottom:8px;color:#333;line-height:1.3}}
 .link-preview-url{{font-size:0.85em;color:#666;word-break:break-all}}
@@ -409,14 +409,26 @@ function setupPanelLinks(){{
   const panelPreviewContent=document.getElementById('panel-preview-content');
   let hideTimeout;
 
+  // Helper function for case-insensitive panel lookup
+  function findPanel(panelName){{
+    if(!dataByYear['2025'])return null;
+    const lowerName=panelName.toLowerCase();
+    for(const key of Object.keys(dataByYear['2025'])){{
+      if(key.toLowerCase()===lowerName)return{{name:key,data:dataByYear['2025'][key]}};
+    }}
+    return null;
+  }}
+
   links.forEach(link=>{{
     const panelName=link.dataset.panel;
-    const panel2025=dataByYear['2025']?dataByYear['2025'][panelName]:null;
+    const panelMatch=findPanel(panelName);
+    const panel2025=panelMatch?panelMatch.data:null;
+    const panelDisplayName=panelMatch?panelMatch.name:panelName;
 
     link.addEventListener('mouseenter',()=>{{
       clearTimeout(hideTimeout);
       if(panel2025){{
-        panelPreviewTitle.textContent=panelName.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
+        panelPreviewTitle.textContent=panelDisplayName.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
         panelPreviewContent.innerHTML='';
         panel2025.presentations.forEach(pres=>{{
           const item=document.createElement('div');
