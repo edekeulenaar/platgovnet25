@@ -98,7 +98,7 @@ One of the main highlights was the gap between regulatory ambition and the reali
 
 At the same time, the conference gestured beyond Europe’s regulatory orbit. The panel ***Sovereignty and Platform Power*** highlighted regulatory developments in African and Latin American countries, including comparative perspectives on gender-based violence legislation in Europe and Colombia. These region-specific approaches to sovereignty underscored the importance of situating regulatory efforts within distinct socio-legal contexts. At the same time, discussions around the non-aligned paths to digital autonomy reintroduced center-periphery perspectives from world systems, helping to make sense of the transnational power asymmetries that continue to structure platform governance.
 
-### *Another ongoing conversation is about **political economy and infrastructural constraints.***
+### **Another ongoing conversation is about political economy and infrastructural constraints.**
 
 The ***Platform Labor and Political Economy*** pointed to labor arrangements that remain unequal and unevenly visible. This implies examining how algorithmic management, interface design, and outsourcing practices continue to shape the conditions of platform workers, which echo concerns raised in 2021 around gig work and labor of content moderation. What emerged more clearly this year was the extent to which regulatory frameworks themselves increasingly rely on (and to some extent reproduce) these labor arrangements, be it through audit practices or risk assessments. There is a sense that governance and labor are both being commodified through platform infrastructures, with market logics shaping everything from privacy compliance to domestic work arrangements all while performing accountability and transparency. 
 
@@ -112,7 +112,7 @@ The panel revealed how these dependencies manifest in multiple domains. In conte
 
 ### *Discursive and normative foundations of governance*
 
-Finally, through a panel on ***Discourse about Platform Governance***, we drew attention to the narratives about governance itself. Several papers examined how concepts such as risk, innovation, safety are frequently used across policy documents, corporate communication, and public debate, but actually shape our understanding of *who defines the problems platform governance is meant to solve, and whose interests those definitions ultimately serve.*
+Finally, through a panel on ***The Discourse of Platform Governance***, we drew attention to the narratives about governance itself. Several papers examined how concepts such as risk, innovation, safety are frequently used across policy documents, corporate communication, and public debate, but actually shape our understanding of *who defines the problems platform governance is meant to solve, and whose interests those definitions ultimately serve.*
 
 Research on the AI Act, for example, revealed how the idea of innovation functions as a somewhat empty signifier, while simultaneously serving as a vector of techno-optimism that tends to see regulation as obstacles to progress. This did not prevent EU policy experts from expressing deep concern about rapid regulatory backsliding, with American companies becoming increasingly sophisticated at European lobbying and pressures mounting to dilute the DSA, DMA, and AI Act in the name of competitiveness. 
 

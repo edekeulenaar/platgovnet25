@@ -200,11 +200,22 @@ def build_html():
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{font-family:'Crimson Text',serif;line-height:1.6;color:#333;background:#fff;padding:20px 20px 20px 260px;max-width:1600px;margin:0 auto;position:relative}}
 h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
-.filter-section{{margin-bottom:40px;padding-bottom:30px;border-bottom:1px solid #ddd}}
-.filter-section strong{{display:block;margin-bottom:10px;font-size:1.1em}}
-.theme-tag{{display:inline-block;padding:5px 12px;margin:3px;background:#f5f5f5;border-radius:3px;cursor:pointer;font-size:0.9em;transition:all 0.2s}}
-.theme-tag:hover{{background:#e0e0e0}}
-.theme-tag.active{{background:#333;color:white}}
+/* Left sidebar for filter */
+.left-sidebar{{position:fixed;left:15px;top:20px;width:230px;max-height:calc(100vh - 40px);overflow-y:auto;z-index:9998}}
+.filter-sidebar{{margin-bottom:20px}}
+.filter-sidebar strong{{display:block;margin-bottom:10px;font-size:1.1em;font-weight:600}}
+.filter-sidebar .theme-tag{{display:block;padding:6px 10px;margin:4px 0;background:#f5f5f5;border-radius:3px;cursor:pointer;font-size:0.9em;transition:all 0.2s}}
+.filter-sidebar .theme-tag:hover{{background:#e0e0e0;padding-left:14px}}
+.filter-sidebar .theme-tag.active{{background:#333;color:white}}
+.filter-count{{display:inline-block;margin-left:8px;padding:2px 6px;background:#2c5aa0;color:white;border-radius:10px;font-size:0.75em;font-weight:600}}
+/* TOC sidebar - no box */
+.toc-sidebar{{margin-top:20px;padding-top:20px;border-top:1px solid #ddd}}
+.toc-sidebar .sidebar-title{{font-weight:600;font-size:1em;margin-bottom:10px;color:#333}}
+.toc-sidebar .sidebar-item{{padding:6px 4px;cursor:pointer;color:#2c5aa0;font-size:0.85em;transition:all 0.2s;line-height:1.4}}
+.toc-sidebar .sidebar-item:hover{{padding-left:8px;color:#1a3d6e}}
+.toc-sidebar .sidebar-item.level-1{{font-weight:600;font-size:0.95em}}
+.toc-sidebar .sidebar-item.level-2{{padding-left:10px;font-size:0.85em}}
+.toc-sidebar .sidebar-item.level-3{{padding-left:20px;font-size:0.8em;font-style:italic}}
 .conference-map{{margin-bottom:60px}}
 .year-section{{margin-bottom:50px;display:grid;grid-template-columns:400px 1fr;gap:40px;align-items:start}}
 .year-left{{}}
@@ -215,6 +226,7 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 .panel-item{{position:relative;transition:opacity 0.3s;margin:0;padding:0}}
 .panel-item:first-child{{margin-top:0}}
 .panel-item.greyed-out{{opacity:0.2}}
+.panel-item.highlighted{{background:#fff8dc;border-radius:4px;padding:5px}}
 .panel-name{{font-weight:600;margin:0 0 8px 0;padding:0;display:block;font-size:0.95em;line-height:1.5}}
 .panel-name.clickable{{cursor:pointer;color:#2c5aa0}}
 .panel-name.clickable:hover{{text-decoration:underline}}
@@ -226,13 +238,6 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 .tooltip .tooltip-presentation{{display:block;font-size:0.95em;opacity:0.9}}
 .dot:hover .tooltip{{opacity:1}}
 .summary-container{{position:relative;margin-top:60px}}
-.floating-sidebar{{position:fixed;left:15px;top:120px;width:230px;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;max-height:calc(100vh - 140px);overflow-y:auto;z-index:9999;background:#fff;padding:12px;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.15);border:1px solid #ccc}}
-.floating-sidebar.visible{{opacity:1;visibility:visible}}
-.floating-sidebar .sidebar-item{{padding:8px 4px;cursor:pointer;color:#2c5aa0;font-size:0.9em;border-bottom:1px solid #f0f0f0;transition:all 0.2s;line-height:1.4}}
-.floating-sidebar .sidebar-item:hover{{padding-left:8px;background:#f5f5f5}}
-.floating-sidebar .sidebar-item.level-1{{font-weight:600;font-size:1em}}
-.floating-sidebar .sidebar-item.level-2{{padding-left:10px;font-size:0.9em}}
-.floating-sidebar .sidebar-item.level-3{{padding-left:20px;font-size:0.85em;font-style:italic}}
 .summary-main{{max-width:800px}}
 .summary-section{{margin-top:0}}
 .summary-section h2{{font-size:1.8em;margin-bottom:20px;font-weight:600}}
@@ -243,28 +248,52 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 .summary-section a:hover{{background:#f0f5ff}}
 .summary-section em{{font-style:italic}}
 .summary-section strong{{font-weight:600}}
-.panel-link{{color:#2c5aa0;cursor:pointer;position:relative;border-bottom:1px dotted #2c5aa0}}
+.panel-link{{color:#2c5aa0;cursor:pointer;border-bottom:1px dotted #2c5aa0}}
 .panel-link:hover{{background:#f0f5ff}}
-.panel-participants{{position:absolute;bottom:100%;left:0;background:rgba(0,0,0,0.9);color:white;padding:10px 12px;border-radius:4px;font-size:0.85em;opacity:0;pointer-events:none;transition:opacity 0.2s;z-index:1000;margin-bottom:5px;min-width:300px;max-width:400px;line-height:1.5}}
-.panel-participants .participant-item{{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.2)}}
-.panel-participants .participant-item:last-child{{margin-bottom:0;padding-bottom:0;border-bottom:none}}
-.panel-participants .participant-name{{font-weight:600;display:block;margin-bottom:2px}}
-.panel-participants .participant-presentation{{display:block;font-size:0.95em;opacity:0.9}}
-.panel-link:hover .panel-participants{{opacity:1}}
 .keynote-section{{background:#f9f9f9;padding:20px 25px;margin:30px 0;border-left:4px solid #2c5aa0}}
 .keynote-section p{{margin-bottom:12px}}
+/* Panel preview - fixed on right side */
+.panel-preview{{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:350px;max-height:70vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;overflow-y:auto}}
+.panel-preview.visible{{opacity:1;visibility:visible}}
+.panel-preview-title{{font-weight:600;font-size:1.1em;margin-bottom:12px;color:#333;border-bottom:1px solid #eee;padding-bottom:8px}}
+.panel-preview .participant-item{{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f0f0}}
+.panel-preview .participant-item:last-child{{margin-bottom:0;padding-bottom:0;border-bottom:none}}
+.panel-preview .participant-name{{font-weight:600;display:block;margin-bottom:3px;color:#2c5aa0;font-size:0.95em}}
+.panel-preview .participant-presentation{{display:block;font-size:0.9em;color:#555;line-height:1.4}}
+/* External link preview - fixed on right side */
+.link-preview{{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:300px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s}}
+.link-preview.visible{{opacity:1;visibility:visible}}
+.link-preview-title{{font-weight:600;font-size:1em;margin-bottom:8px;color:#333;line-height:1.3}}
+.link-preview-url{{font-size:0.85em;color:#666;word-break:break-all}}
 </style>
 </head><body>
+<div class="left-sidebar" id="left-sidebar">
+<div class="filter-sidebar">
+<strong>Filter by theme:</strong>
+<div id="global-themes"></div>
+<div id="filter-count-display" style="margin-top:10px;font-size:0.9em;color:#666;display:none;"></div>
+</div>
+<div class="toc-sidebar" id="toc-sidebar">
+<div class="sidebar-title">Table of Contents</div>
+<div id="sidebar-panels"></div>
+</div>
+</div>
 <h1>PlatGovNet, then and now</h1>
-<div class="filter-section"><strong>Filter by theme:</strong><div id="global-themes"></div></div>
 <div class="conference-map">
 <div class="year-section"><div class="year-left"><div class="year-header">2021</div><div class="year-summary">{menu_data['2021']}</div></div><div class="year-right"><div class="panels-grid" id="panels-2021"></div></div></div>
 <div class="year-section"><div class="year-left"><div class="year-header">2023</div><div class="year-summary">{menu_data['2023']}</div></div><div class="year-right"><div class="panels-grid" id="panels-2023"></div></div></div>
 <div class="year-section"><div class="year-left"><div class="year-header">2025</div><div class="year-summary">{menu_data['2025']}</div></div><div class="year-right"><div class="panels-grid" id="panels-2025"></div></div></div>
 </div>
-<div class="floating-sidebar" id="floating-sidebar"><div id="sidebar-panels"></div></div>
 <div class="summary-container">
 <div class="summary-main"><div class="summary-section" id="summary-2025">{summary_escaped}</div></div>
+</div>
+<div class="panel-preview" id="panel-preview">
+<div class="panel-preview-title" id="panel-preview-title"></div>
+<div id="panel-preview-content"></div>
+</div>
+<div class="link-preview" id="link-preview">
+<div class="link-preview-title" id="preview-title"></div>
+<div class="link-preview-url" id="preview-url"></div>
 </div>
 <script>
 // Data is already parsed by Python and embedded as JSON
@@ -272,20 +301,225 @@ const dataByYear={data_json};
 const allThemes={themes_json};
 const sidebarHeadings={headings_json};
 
-// Render theme filters
+// Render theme filters in left sidebar
 const globalThemesContainer=document.getElementById('global-themes');
-allThemes.forEach(theme=>{{const tag=document.createElement('span');tag.className='theme-tag';tag.textContent=theme;tag.dataset.theme=theme;tag.addEventListener('click',()=>toggleGlobalTheme(theme,tag));globalThemesContainer.appendChild(tag)}});
+const filterCountDisplay=document.getElementById('filter-count-display');
+allThemes.forEach(theme=>{{
+  const tag=document.createElement('span');
+  tag.className='theme-tag';
+  tag.textContent=theme;
+  tag.dataset.theme=theme;
+  tag.addEventListener('click',()=>toggleGlobalTheme(theme,tag));
+  globalThemesContainer.appendChild(tag);
+}});
 
 // Render panels for each year
-function renderYear(year){{const panels=dataByYear[year];if(!panels)return;const container=document.getElementById(`panels-${{year}}`);Object.keys(panels).forEach(panelName=>{{const panel=panels[panelName];const panelDiv=document.createElement('div');panelDiv.className='panel-item';panelDiv.dataset.theme=panel.theme;panelDiv.dataset.panel=panelName.toLowerCase();panelDiv.dataset.year=year;const nameDiv=document.createElement('div');nameDiv.className='panel-name';if(year==='2025'){{nameDiv.classList.add('clickable');nameDiv.onclick=()=>{{const links=document.querySelectorAll(`.panel-link[data-panel="${{panelName.toLowerCase()}}"]`);if(links[0]){{links[0].scrollIntoView({{behavior:'smooth',block:'center'}});links[0].style.background='#fff8dc';setTimeout(()=>links[0].style.background='',2000)}}}}}}nameDiv.textContent=panelName;const dotsDiv=document.createElement('div');dotsDiv.className='presentation-dots';panel.presentations.forEach(pres=>{{const dot=document.createElement('div');dot.className='dot';const tooltip=document.createElement('div');tooltip.className='tooltip';const nameSpan=document.createElement('span');nameSpan.className='tooltip-name';nameSpan.textContent=pres.person;const presSpan=document.createElement('span');presSpan.className='tooltip-presentation';presSpan.textContent=pres.presentation;tooltip.appendChild(nameSpan);tooltip.appendChild(presSpan);dot.appendChild(tooltip);dotsDiv.appendChild(dot)}});panelDiv.appendChild(nameDiv);panelDiv.appendChild(dotsDiv);container.appendChild(panelDiv)}})}}
+function renderYear(year){{
+  const panels=dataByYear[year];
+  if(!panels)return;
+  const container=document.getElementById(`panels-${{year}}`);
+  Object.keys(panels).forEach(panelName=>{{
+    const panel=panels[panelName];
+    const panelDiv=document.createElement('div');
+    panelDiv.className='panel-item';
+    panelDiv.dataset.theme=panel.theme;
+    panelDiv.dataset.panel=panelName.toLowerCase();
+    panelDiv.dataset.year=year;
+    const nameDiv=document.createElement('div');
+    nameDiv.className='panel-name';
+    if(year==='2025'){{
+      nameDiv.classList.add('clickable');
+      nameDiv.onclick=()=>{{
+        const links=document.querySelectorAll(`.panel-link[data-panel="${{panelName.toLowerCase()}}"]`);
+        if(links[0]){{
+          links[0].scrollIntoView({{behavior:'smooth',block:'center'}});
+          links[0].style.background='#fff8dc';
+          setTimeout(()=>links[0].style.background='',2000);
+        }}
+      }}
+    }}
+    nameDiv.textContent=panelName;
+    const dotsDiv=document.createElement('div');
+    dotsDiv.className='presentation-dots';
+    panel.presentations.forEach(pres=>{{
+      const dot=document.createElement('div');
+      dot.className='dot';
+      const tooltip=document.createElement('div');
+      tooltip.className='tooltip';
+      const nameSpan=document.createElement('span');
+      nameSpan.className='tooltip-name';
+      nameSpan.textContent=pres.person;
+      const presSpan=document.createElement('span');
+      presSpan.className='tooltip-presentation';
+      presSpan.textContent=pres.presentation;
+      tooltip.appendChild(nameSpan);
+      tooltip.appendChild(presSpan);
+      dot.appendChild(tooltip);
+      dotsDiv.appendChild(dot);
+    }});
+    panelDiv.appendChild(nameDiv);
+    panelDiv.appendChild(dotsDiv);
+    container.appendChild(panelDiv);
+  }});
+}}
 
-function toggleGlobalTheme(theme,el){{const panels=document.querySelectorAll('.panel-item');const tags=document.querySelectorAll('.theme-tag');const wasActive=el.classList.contains('active');if(wasActive){{el.classList.remove('active');panels.forEach(p=>p.classList.remove('greyed-out'))}}else{{tags.forEach(t=>t.classList.remove('active'));el.classList.add('active');panels.forEach(p=>{{if(p.dataset.theme!==theme)p.classList.add('greyed-out');else p.classList.remove('greyed-out')}})}}}};
+// Toggle theme filter with count indicator
+function toggleGlobalTheme(theme,el){{
+  const panels=document.querySelectorAll('.panel-item');
+  const tags=document.querySelectorAll('.theme-tag');
+  const wasActive=el.classList.contains('active');
+  tags.forEach(t=>{{
+    t.classList.remove('active');
+    const existingCount=t.querySelector('.filter-count');
+    if(existingCount)existingCount.remove();
+  }});
+  if(wasActive){{
+    panels.forEach(p=>{{
+      p.classList.remove('greyed-out');
+      p.classList.remove('highlighted');
+    }});
+    filterCountDisplay.style.display='none';
+  }}else{{
+    el.classList.add('active');
+    let highlightedCount=0;
+    panels.forEach(p=>{{
+      if(p.dataset.theme!==theme){{
+        p.classList.add('greyed-out');
+        p.classList.remove('highlighted');
+      }}else{{
+        p.classList.remove('greyed-out');
+        p.classList.add('highlighted');
+        highlightedCount++;
+      }}
+    }});
+    const countBadge=document.createElement('span');
+    countBadge.className='filter-count';
+    countBadge.textContent=highlightedCount;
+    el.appendChild(countBadge);
+    filterCountDisplay.textContent=`${{highlightedCount}} panels highlighted`;
+    filterCountDisplay.style.display='block';
+  }}
+}}
 
-function setupPanelLinks(){{const links=document.querySelectorAll('.panel-link');links.forEach(link=>{{const panelName=link.dataset.panel;const panel2025=dataByYear['2025']?dataByYear['2025'][panelName]:null;if(panel2025){{const div=document.createElement('div');div.className='panel-participants';panel2025.presentations.forEach(pres=>{{const item=document.createElement('div');item.className='participant-item';const name=document.createElement('span');name.className='participant-name';name.textContent=pres.person;const pres2=document.createElement('span');pres2.className='participant-presentation';pres2.textContent=pres.presentation;item.appendChild(name);item.appendChild(pres2);div.appendChild(item)}});link.appendChild(div)}}link.onclick=(e)=>{{e.preventDefault();const el=document.querySelector(`[data-panel="${{panelName}}"][data-year="2025"]`);if(el){{el.scrollIntoView({{behavior:'smooth',block:'center'}});el.style.background='#fff8dc';setTimeout(()=>el.style.background='',2000)}}}}}})}}
+// Setup panel links with fixed right-side preview
+function setupPanelLinks(){{
+  const links=document.querySelectorAll('.panel-link');
+  const panelPreview=document.getElementById('panel-preview');
+  const panelPreviewTitle=document.getElementById('panel-preview-title');
+  const panelPreviewContent=document.getElementById('panel-preview-content');
+  let hideTimeout;
 
-function setupFloatingSidebar(){{const sidebar=document.getElementById('floating-sidebar');const sidebarPanels=document.getElementById('sidebar-panels');const summarySection=document.getElementById('summary-2025');if(!sidebarHeadings||sidebarHeadings.length===0)return;sidebarHeadings.forEach(heading=>{{const div=document.createElement('div');div.className=`sidebar-item level-${{heading.level}}`;div.textContent=heading.text;div.onclick=()=>{{const el=document.getElementById(heading.id);if(el){{el.scrollIntoView({{behavior:'smooth',block:'start'}});el.style.background='#fff8dc';setTimeout(()=>el.style.background='',2000)}}}};sidebarPanels.appendChild(div)}});function checkSidebarVisibility(){{const rect=summarySection.getBoundingClientRect();const inView=rect.top<window.innerHeight&&rect.bottom>0;if(inView)sidebar.classList.add('visible');else sidebar.classList.remove('visible')}};window.addEventListener('scroll',checkSidebarVisibility);window.addEventListener('resize',checkSidebarVisibility);checkSidebarVisibility()}}
+  links.forEach(link=>{{
+    const panelName=link.dataset.panel;
+    const panel2025=dataByYear['2025']?dataByYear['2025'][panelName]:null;
 
-renderYear('2021');renderYear('2023');renderYear('2025');setupPanelLinks();setupFloatingSidebar();
+    link.addEventListener('mouseenter',()=>{{
+      clearTimeout(hideTimeout);
+      if(panel2025){{
+        panelPreviewTitle.textContent=panelName.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
+        panelPreviewContent.innerHTML='';
+        panel2025.presentations.forEach(pres=>{{
+          const item=document.createElement('div');
+          item.className='participant-item';
+          const name=document.createElement('span');
+          name.className='participant-name';
+          name.textContent=pres.person;
+          const presText=document.createElement('span');
+          presText.className='participant-presentation';
+          presText.textContent=pres.presentation;
+          item.appendChild(name);
+          item.appendChild(presText);
+          panelPreviewContent.appendChild(item);
+        }});
+        panelPreview.classList.add('visible');
+      }}
+    }});
+
+    link.addEventListener('mouseleave',()=>{{
+      hideTimeout=setTimeout(()=>{{
+        panelPreview.classList.remove('visible');
+      }},200);
+    }});
+
+    link.onclick=(e)=>{{
+      e.preventDefault();
+      const el=document.querySelector(`[data-panel="${{panelName}}"][data-year="2025"]`);
+      if(el){{
+        el.scrollIntoView({{behavior:'smooth',block:'center'}});
+        el.style.background='#fff8dc';
+        setTimeout(()=>el.style.background='',2000);
+      }}
+    }};
+  }});
+
+  panelPreview.addEventListener('mouseenter',()=>{{
+    clearTimeout(hideTimeout);
+  }});
+  panelPreview.addEventListener('mouseleave',()=>{{
+    panelPreview.classList.remove('visible');
+  }});
+}}
+
+// Setup TOC sidebar (no box, always visible)
+function setupTocSidebar(){{
+  const sidebarPanels=document.getElementById('sidebar-panels');
+  if(!sidebarHeadings||sidebarHeadings.length===0)return;
+  sidebarHeadings.forEach(heading=>{{
+    const div=document.createElement('div');
+    div.className=`sidebar-item level-${{heading.level}}`;
+    const maxLen=heading.level===1?60:heading.level===2?50:40;
+    let text=heading.text;
+    if(text.length>maxLen)text=text.substring(0,maxLen)+'...';
+    div.textContent=text;
+    div.title=heading.text;
+    div.onclick=()=>{{
+      const el=document.getElementById(heading.id);
+      if(el){{
+        el.scrollIntoView({{behavior:'smooth',block:'start'}});
+        el.style.background='#fff8dc';
+        setTimeout(()=>el.style.background='',2000);
+      }}
+    }};
+    sidebarPanels.appendChild(div);
+  }});
+}}
+
+// Setup external link preview (title and URL only)
+function setupLinkPreview(){{
+  const preview=document.getElementById('link-preview');
+  const previewTitle=document.getElementById('preview-title');
+  const previewUrl=document.getElementById('preview-url');
+  const summaryLinks=document.querySelectorAll('.summary-section a[href^="http"]');
+  let hideTimeout;
+  summaryLinks.forEach(link=>{{
+    link.addEventListener('mouseenter',(e)=>{{
+      clearTimeout(hideTimeout);
+      const url=link.href;
+      previewTitle.textContent=link.textContent||'External Link';
+      previewUrl.textContent=url;
+      preview.classList.add('visible');
+    }});
+    link.addEventListener('mouseleave',()=>{{
+      hideTimeout=setTimeout(()=>{{
+        preview.classList.remove('visible');
+      }},200);
+    }});
+  }});
+  preview.addEventListener('mouseenter',()=>{{
+    clearTimeout(hideTimeout);
+  }});
+  preview.addEventListener('mouseleave',()=>{{
+    preview.classList.remove('visible');
+  }});
+}}
+
+// Initialize everything
+renderYear('2021');
+renderYear('2023');
+renderYear('2025');
+setupPanelLinks();
+setupTocSidebar();
+setupLinkPreview();
 </script>
 </body></html>'''
     
