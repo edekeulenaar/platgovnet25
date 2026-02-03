@@ -2,6 +2,8 @@
 
 # PlatGovNet2025 Summary: Transitions, frictions, and new realities in global platform governance
 
+Emillie de Keulenaar and Diyi Liu
+
 Ever since we have understood platforms to have “[eaten the world](https://www.forbes.com/sites/gregsatell/2016/09/02/platforms-are-eating-the-world-3/)”, platform governance research emerged as an effort to understand the nature of governance *by*, *with*, and *through* the companies and other actors who own and operate them.  This makes it an essentially interdisciplinary field that borrows and mixes elements of any discipline that helps describe its material, legal, political and social conditions relative to its ever-evolving nature. The Platform Governance Research Network (PlatGovNet) conference is one opportunity to reconvene all of those who take part in this effort and constitute the state of the field today. 
 
 ## **PlatGovNet way back when**
