@@ -2,7 +2,8 @@
 
 # PlatGovNet2025 Summary: Transitions, frictions, and new realities in global platform governance
 
-Emillie de Keulenaar and Diyi Liu
+*Emillie de Keulenaar
+Diyi Liu*
 
 Ever since we have understood platforms to have “[eaten the world](https://www.forbes.com/sites/gregsatell/2016/09/02/platforms-are-eating-the-world-3/)”, platform governance research emerged as an effort to understand the nature of governance *by*, *with*, and *through* the companies and other actors who own and operate them.  This makes it an essentially interdisciplinary field that borrows and mixes elements of any discipline that helps describe its material, legal, political and social conditions relative to its ever-evolving nature. The Platform Governance Research Network (PlatGovNet) conference is one opportunity to reconvene all of those who take part in this effort and constitute the state of the field today. 
 
@@ -162,15 +163,15 @@ Decentralisation, composable architectures, as well as a more diverse array of �
 
 ### *The second is a question of information asymmetry*
 
-We face a persistent “governance gap”: the capacity of workers, users, researchers, and public actors to operationalise their demands and values within the infrastructures that govern their sectors. This raises questions of training, education, and institutional support: how do we foster the skills required to translate normative claims into technical and organizational forms, and how do we sustain collaboration across disciplinary, professional, and political boundaries?
+There appears to be a persistent “governance gap”: the capacity of workers, users, researchers, and public actors to operationalise their demands and values within the infrastructures that govern their sectors. This raises questions of training, education, and institutional support: how does one foster the skills required to translate normative claims into technical and organizational forms? And what can be done to train this as a method and civic capacity?
 
 ### *As such, the third is a question of research*
 
-Discussing the nature, implications and executions of platform governance inevitably lends to  description or critical research. We describe who is involved in governance and how. We critique the ways in which governance falls short across these actors. Yet, one often shies away from proactive propositions. We may mark a step beyond normative or other critique and towards a form of ethics, i.e., how else governance may be done. This does not need to land on simple solutionism, but on deliberation around applicable concepts, frameworks and protocols. This would entail often uncomfortable interdisciplinary work that helps grasp governance as it is enacted across code, law, labor, and discourse.
+Discussing the nature, implications and executions of platform governance inevitably lends to  description or critical research. Works often describe who is involved in governance and how. They critique the ways in which governance falls short across these actors. Yet, they may sometimes shy way from proactive propositions towards a form of ethics, i.e., how else governance may be done. This does not need to land on solutionism, but on deliberation around applicable concepts, frameworks and protocols. 
 
 ### *And a final one: platform governance research in polarised times*
 
-Platform governance is inevitably steeped in profound conflicted debates about how and why to moderate public speech. How can research speak both *to* and *beyond* the polarised language of content governance? Should we consider political diversity a criteria for “diverse” research, and intellectual and ideological monocultures a lack thereof? And if so, how do we resolve profound political and normative differences within our field? Some of these challenges appear closer than they look, and conferences like these are special opportunities to continue deliberating about our own forms of governance.  
+Platform governance is sometimes (perhaps inevitably) steeped in profound conflicted debates about how and why to moderate public speech. How can research speak both *to* and *beyond* the polarised language of content governance? Should we consider political diversity a criteria for “diverse” research, and intellectual and ideological monocultures a lack thereof? And if so, how does one resolve profound political and normative differences within this field? Some of these challenges appear closer than they look, and conferences like these are special opportunities to continue deliberating about our own forms of governance.  
 
 ## **Funding acknowledgement**
 

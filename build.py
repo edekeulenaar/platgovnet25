@@ -244,24 +244,26 @@ h1{{font-size:2em;margin-bottom:40px;font-weight:600}}
 .summary-section h3{{font-size:1.3em;margin-top:30px;margin-bottom:15px;font-weight:600}}
 .summary-section h4{{font-size:1.1em;margin-top:25px;margin-bottom:12px;font-weight:600;font-style:italic}}
 .summary-section p{{margin-bottom:15px;line-height:1.7}}
+.summary-section p.byline{{font-style:italic;color:#555;margin-bottom:25px}}
 .summary-section a{{color:#2c5aa0;text-decoration:none;border-bottom:1px solid #2c5aa0}}
 .summary-section a:hover{{background:#f0f5ff}}
 .summary-section em{{font-style:italic}}
 .summary-section strong{{font-weight:600}}
 .panel-link{{color:#2c5aa0;cursor:pointer;border-bottom:1px dotted #2c5aa0}}
 .panel-link:hover{{background:#f0f5ff}}
+.panel-link.theme-highlighted{{background:#fff8dc;padding:2px 4px;border-radius:3px}}
 .keynote-section{{background:#f9f9f9;padding:20px 25px;margin:30px 0;border-left:4px solid #2c5aa0}}
 .keynote-section p{{margin-bottom:12px}}
-/* Panel preview - centered on right side of content */
-.panel-preview{{position:fixed;right:50%;margin-right:-580px;top:50%;transform:translateY(-50%);width:350px;max-height:70vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;overflow-y:auto}}
+/* Panel preview - positioned dynamically via JS at same height as hovered link */
+.panel-preview{{position:fixed;left:1100px;width:320px;max-height:50vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;overflow-y:auto}}
 .panel-preview.visible{{opacity:1;visibility:visible}}
 .panel-preview-title{{font-weight:600;font-size:1.1em;margin-bottom:12px;color:#333;border-bottom:1px solid #eee;padding-bottom:8px}}
 .panel-preview .participant-item{{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f0f0}}
 .panel-preview .participant-item:last-child{{margin-bottom:0;padding-bottom:0;border-bottom:none}}
 .panel-preview .participant-name{{font-weight:600;display:block;margin-bottom:3px;color:#2c5aa0;font-size:0.95em}}
 .panel-preview .participant-presentation{{display:block;font-size:0.9em;color:#555;line-height:1.4}}
-/* External link preview - centered on right side of content */
-.link-preview{{position:fixed;right:50%;margin-right:-580px;top:50%;transform:translateY(-50%);width:300px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s}}
+/* External link preview - positioned dynamically via JS at same height as hovered link */
+.link-preview{{position:fixed;left:1100px;width:280px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}}
 .link-preview.visible{{opacity:1;visibility:visible}}
 .link-preview-title{{font-weight:600;font-size:1em;margin-bottom:8px;color:#333;line-height:1.3}}
 .link-preview-url{{font-size:0.85em;color:#666;word-break:break-all}}
@@ -366,6 +368,7 @@ function renderYear(year){{
 // Toggle theme filter with count indicator
 function toggleGlobalTheme(theme,el){{
   const panels=document.querySelectorAll('.panel-item');
+  const panelLinks=document.querySelectorAll('.panel-link');
   const tags=document.querySelectorAll('.theme-tag');
   const wasActive=el.classList.contains('active');
   tags.forEach(t=>{{
@@ -378,10 +381,16 @@ function toggleGlobalTheme(theme,el){{
       p.classList.remove('greyed-out');
       p.classList.remove('highlighted');
     }});
+    // Remove highlighting from panel-links in text
+    panelLinks.forEach(link=>{{
+      link.classList.remove('theme-highlighted');
+    }});
     filterCountDisplay.style.display='none';
   }}else{{
     el.classList.add('active');
     let highlightedCount=0;
+    // Build a set of panel names that match the theme
+    const matchingPanels=new Set();
     panels.forEach(p=>{{
       if(p.dataset.theme!==theme){{
         p.classList.add('greyed-out');
@@ -390,6 +399,17 @@ function toggleGlobalTheme(theme,el){{
         p.classList.remove('greyed-out');
         p.classList.add('highlighted');
         highlightedCount++;
+        // Add this panel name to matching set
+        if(p.dataset.panel)matchingPanels.add(p.dataset.panel.toLowerCase());
+      }}
+    }});
+    // Highlight panel-links in text that match the theme
+    panelLinks.forEach(link=>{{
+      const panelName=link.dataset.panel?link.dataset.panel.toLowerCase():'';
+      if(matchingPanels.has(panelName)){{
+        link.classList.add('theme-highlighted');
+      }}else{{
+        link.classList.remove('theme-highlighted');
       }}
     }});
     const countBadge=document.createElement('span');
@@ -401,13 +421,12 @@ function toggleGlobalTheme(theme,el){{
   }}
 }}
 
-// Setup panel links with fixed right-side preview
+// Setup panel links with preview at same height as hovered link
 function setupPanelLinks(){{
-  const links=document.querySelectorAll('.panel-link');
   const panelPreview=document.getElementById('panel-preview');
   const panelPreviewTitle=document.getElementById('panel-preview-title');
   const panelPreviewContent=document.getElementById('panel-preview-content');
-  let hideTimeout;
+  let hideTimeout=null;
 
   // Helper function for case-insensitive panel lookup
   function findPanel(panelName){{
@@ -419,55 +438,76 @@ function setupPanelLinks(){{
     return null;
   }}
 
-  links.forEach(link=>{{
+  // Position preview at same height as element
+  function positionPreview(element,preview){{
+    const rect=element.getBoundingClientRect();
+    const previewHeight=preview.offsetHeight||200;
+    let topPos=rect.top;
+    if(topPos+previewHeight>window.innerHeight-20){{
+      topPos=window.innerHeight-previewHeight-20;
+    }}
+    if(topPos<20)topPos=20;
+    preview.style.top=topPos+'px';
+  }}
+
+  // Use event delegation for better compatibility
+  document.addEventListener('mouseover',function(e){{
+    const link=e.target.closest('.panel-link');
+    if(!link)return;
+
+    clearTimeout(hideTimeout);
     const panelName=link.dataset.panel;
     const panelMatch=findPanel(panelName);
     const panel2025=panelMatch?panelMatch.data:null;
     const panelDisplayName=panelMatch?panelMatch.name:panelName;
 
-    link.addEventListener('mouseenter',()=>{{
-      clearTimeout(hideTimeout);
-      if(panel2025){{
-        panelPreviewTitle.textContent=panelDisplayName.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
-        panelPreviewContent.innerHTML='';
-        panel2025.presentations.forEach(pres=>{{
-          const item=document.createElement('div');
-          item.className='participant-item';
-          const name=document.createElement('span');
-          name.className='participant-name';
-          name.textContent=pres.person;
-          const presText=document.createElement('span');
-          presText.className='participant-presentation';
-          presText.textContent=pres.presentation;
-          item.appendChild(name);
-          item.appendChild(presText);
-          panelPreviewContent.appendChild(item);
-        }});
-        panelPreview.classList.add('visible');
-      }}
-    }});
-
-    link.addEventListener('mouseleave',()=>{{
-      hideTimeout=setTimeout(()=>{{
-        panelPreview.classList.remove('visible');
-      }},200);
-    }});
-
-    link.onclick=(e)=>{{
-      e.preventDefault();
-      const el=document.querySelector(`[data-panel="${{panelName}}"][data-year="2025"]`);
-      if(el){{
-        el.scrollIntoView({{behavior:'smooth',block:'center'}});
-        el.style.background='#fff8dc';
-        setTimeout(()=>el.style.background='',2000);
-      }}
-    }};
+    if(panel2025){{
+      panelPreviewTitle.textContent=panelDisplayName.split(' ').map(function(w){{return w.charAt(0).toUpperCase()+w.slice(1);}}).join(' ');
+      panelPreviewContent.innerHTML='';
+      panel2025.presentations.forEach(function(pres){{
+        const item=document.createElement('div');
+        item.className='participant-item';
+        const name=document.createElement('span');
+        name.className='participant-name';
+        name.textContent=pres.person;
+        const presText=document.createElement('span');
+        presText.className='participant-presentation';
+        presText.textContent=pres.presentation;
+        item.appendChild(name);
+        item.appendChild(presText);
+        panelPreviewContent.appendChild(item);
+      }});
+      panelPreview.classList.add('visible');
+      positionPreview(link,panelPreview);
+    }}
   }});
 
-  panelPreview.addEventListener('mouseenter',()=>{{
+  document.addEventListener('mouseout',function(e){{
+    const link=e.target.closest('.panel-link');
+    if(!link)return;
+    hideTimeout=setTimeout(function(){{
+      panelPreview.classList.remove('visible');
+    }},200);
+  }});
+
+  // Click handler for panel links
+  document.addEventListener('click',function(e){{
+    const link=e.target.closest('.panel-link');
+    if(!link)return;
+    e.preventDefault();
+    const panelName=link.dataset.panel;
+    const el=document.querySelector('[data-panel="'+panelName+'"][data-year="2025"]');
+    if(el){{
+      el.scrollIntoView({{behavior:'smooth',block:'center'}});
+      el.style.background='#fff8dc';
+      setTimeout(function(){{el.style.background='';}},2000);
+    }}
+  }});
+
+  panelPreview.addEventListener('mouseenter',function(){{
     clearTimeout(hideTimeout);
   }});
-  panelPreview.addEventListener('mouseleave',()=>{{
+  panelPreview.addEventListener('mouseleave',function(){{
     panelPreview.classList.remove('visible');
   }});
 }}
@@ -496,31 +536,52 @@ function setupTocSidebar(){{
   }});
 }}
 
-// Setup external link preview (title and URL only)
+// Setup external link preview (title and URL only) at same height as hovered link
 function setupLinkPreview(){{
   const preview=document.getElementById('link-preview');
   const previewTitle=document.getElementById('preview-title');
   const previewUrl=document.getElementById('preview-url');
-  const summaryLinks=document.querySelectorAll('.summary-section a[href^="http"]');
-  let hideTimeout;
-  summaryLinks.forEach(link=>{{
-    link.addEventListener('mouseenter',(e)=>{{
-      clearTimeout(hideTimeout);
-      const url=link.href;
-      previewTitle.textContent=link.textContent||'External Link';
-      previewUrl.textContent=url;
-      preview.classList.add('visible');
-    }});
-    link.addEventListener('mouseleave',()=>{{
-      hideTimeout=setTimeout(()=>{{
-        preview.classList.remove('visible');
-      }},200);
-    }});
+  let hideTimeout=null;
+
+  // Position preview at same height as element
+  function positionPreview(element){{
+    const rect=element.getBoundingClientRect();
+    const previewHeight=preview.offsetHeight||80;
+    let topPos=rect.top;
+    if(topPos+previewHeight>window.innerHeight-20){{
+      topPos=window.innerHeight-previewHeight-20;
+    }}
+    if(topPos<20)topPos=20;
+    preview.style.top=topPos+'px';
+  }}
+
+  // Use event delegation for better compatibility
+  document.addEventListener('mouseover',function(e){{
+    const link=e.target.closest('.summary-section a[href^="http"]');
+    if(!link)return;
+    if(link.classList.contains('panel-link'))return;
+
+    clearTimeout(hideTimeout);
+    previewTitle.textContent=link.textContent||'External Link';
+    previewUrl.textContent=link.href;
+    preview.classList.add('visible');
+    positionPreview(link);
   }});
-  preview.addEventListener('mouseenter',()=>{{
+
+  document.addEventListener('mouseout',function(e){{
+    const link=e.target.closest('.summary-section a[href^="http"]');
+    if(!link)return;
+    if(link.classList.contains('panel-link'))return;
+
+    hideTimeout=setTimeout(function(){{
+      preview.classList.remove('visible');
+    }},200);
+  }});
+
+  preview.addEventListener('mouseenter',function(){{
     clearTimeout(hideTimeout);
   }});
-  preview.addEventListener('mouseleave',()=>{{
+  preview.addEventListener('mouseleave',function(){{
     preview.classList.remove('visible');
   }});
 }}

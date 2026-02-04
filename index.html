@@ -49,24 +49,26 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 .summary-section h3{font-size:1.3em;margin-top:30px;margin-bottom:15px;font-weight:600}
 .summary-section h4{font-size:1.1em;margin-top:25px;margin-bottom:12px;font-weight:600;font-style:italic}
 .summary-section p{margin-bottom:15px;line-height:1.7}
+.summary-section p.byline{font-style:italic;color:#555;margin-bottom:25px}
 .summary-section a{color:#2c5aa0;text-decoration:none;border-bottom:1px solid #2c5aa0}
 .summary-section a:hover{background:#f0f5ff}
 .summary-section em{font-style:italic}
 .summary-section strong{font-weight:600}
 .panel-link{color:#2c5aa0;cursor:pointer;border-bottom:1px dotted #2c5aa0}
 .panel-link:hover{background:#f0f5ff}
+.panel-link.theme-highlighted{background:#fff8dc;padding:2px 4px;border-radius:3px}
 .keynote-section{background:#f9f9f9;padding:20px 25px;margin:30px 0;border-left:4px solid #2c5aa0}
 .keynote-section p{margin-bottom:12px}
-/* Panel preview - positioned dynamically via JS */
-.panel-preview{position:fixed;left:calc(260px + 800px + 40px);width:320px;max-height:60vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;overflow-y:auto}
+/* Panel preview - positioned dynamically via JS at same height as hovered link */
+.panel-preview{position:fixed;width:320px;max-height:50vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;overflow-y:auto}
 .panel-preview.visible{opacity:1;visibility:visible}
 .panel-preview-title{font-weight:600;font-size:1.1em;margin-bottom:12px;color:#333;border-bottom:1px solid #eee;padding-bottom:8px}
 .panel-preview .participant-item{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f0f0}
 .panel-preview .participant-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
 .panel-preview .participant-name{font-weight:600;display:block;margin-bottom:3px;color:#2c5aa0;font-size:0.95em}
 .panel-preview .participant-presentation{display:block;font-size:0.9em;color:#555;line-height:1.4}
-/* External link preview - positioned dynamically via JS */
-.link-preview{position:fixed;left:calc(260px + 800px + 40px);width:280px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}
+/* External link preview - positioned dynamically via JS at same height as hovered link */
+.link-preview{position:fixed;width:280px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}
 .link-preview.visible{opacity:1;visibility:visible}
 .link-preview-title{font-weight:600;font-size:1em;margin-bottom:8px;color:#333;line-height:1.3}
 .link-preview-url{font-size:0.85em;color:#666;word-break:break-all}
@@ -91,6 +93,7 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 </div>
 <div class="summary-container">
 <div class="summary-main"><div class="summary-section" id="summary-2025"><h2 id="heading-1">PlatGovNet2025 Summary: Transitions, frictions, and new realities in global platform governance</h2>
+<p class="byline"><em>Emillie de Keulenaar and Diyi Liu</em></p>
 <p>Ever since we have understood platforms to have “<a href="https://www.forbes.com/sites/gregsatell/2016/09/02/platforms-are-eating-the-world-3/">eaten the world</a>”, platform governance research emerged as an effort to understand the nature of governance <strong>by</strong>, <strong>with</strong>, and <strong>through</strong> the companies and other actors who own and operate them.  This makes it an essentially interdisciplinary field that borrows and mixes elements of any discipline that helps describe its material, legal, political and social conditions relative to its ever-evolving nature. The Platform Governance Research Network (PlatGovNet) conference is one opportunity to reconvene all of those who take part in this effort and constitute the state of the field today.</p>
 <h3 id="heading-2"><strong>PlatGovNet way back when</strong></h3>
 <p>The inaugural PlatGovNet conference in 2021 took place while societies worldwide confronted their dependence on digital platforms. Two years later, the 2023 conference bore witness to the field’s growing maturity and its increasingly normative orientation. The evolution of the PlatGovNet conferences over the past four years reminds us what questions have proven enduring, and where new concerns have emerged.</p>
@@ -139,7 +142,7 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 <p>The European Union’s Digital Services Act (DSA), Digital Markets Act, and AI Act continue to function as a major reference point for discussion. In <span class="panel-link" data-panel="auditing the dsa">Auditing the DSA</span>, participants discussed early implementation dynamics, interrogating the effectiveness of transparency databases, the practical value of mandated reporting, and the institutional fragilities underlying the Act’s risk-based governance model.</p>
 <p>One of the main highlights was the gap between regulatory ambition and the reality in practice. There are concerns, for example, that DSA’s systemic risk framework has architectural flaws compared to traditional EU risk regulation, such as the regulation of GMOs, chemicals or food products. There are also legitimacy and transparency gaps. The DSA gives the European Commission exclusive enforcement power without requiring member state input or independent agency oversight. Meanwhile, platforms do not provide detailed enough explanations of content moderation decisions, while researchers cannot properly audit platforms without access to moderated content.</p>
 <p>At the same time, the conference gestured beyond Europe’s regulatory orbit. The panel <span class="panel-link" data-panel="sovereignty and platform power">Sovereignty and Platform Power</span> highlighted regulatory developments in African and Latin American countries, including comparative perspectives on gender-based violence legislation in Europe and Colombia. These region-specific approaches to sovereignty underscored the importance of situating regulatory efforts within distinct socio-legal contexts. At the same time, discussions around the non-aligned paths to digital autonomy reintroduced center-periphery perspectives from world systems, helping to make sense of the transnational power asymmetries that continue to structure platform governance.</p>
-<h4 id="heading-13"><strong>Another ongoing conversation is about </strong>*political economy and infrastructural constraints.</h4>
+<h4 id="heading-13"><strong>Another ongoing conversation is about political economy and infrastructural constraints.</strong></h4>
 <p>The <span class="panel-link" data-panel="platform labor and political economy">Platform Labor and Political Economy</span> pointed to labor arrangements that remain unequal and unevenly visible. This implies examining how algorithmic management, interface design, and outsourcing practices continue to shape the conditions of platform workers, which echo concerns raised in 2021 around gig work and labor of content moderation. What emerged more clearly this year was the extent to which regulatory frameworks themselves increasingly rely on (and to some extent reproduce) these labor arrangements, be it through audit practices or risk assessments. There is a sense that governance and labor are both being commodified through platform infrastructures, with market logics shaping everything from privacy compliance to domestic work arrangements all while performing accountability and transparency.</p>
 <p>Another enduring PlatGovNet concern was revisited through the panel of <span class="panel-link" data-panel="global content moderation">Global Content Moderation</span> about the uneven distribution of moderation capacity and contextual understandings of harm. Contributions highlighted persistent disparities in moderation resources, language coverage, and the priorities of platform’s content enforcement across regions, in a way that could systematically marginalize non-Western contexts.</p>
 <p>Across eight languages, for example, low removal rates persist regardless of the severity of a hate-related violation, while English remains the most moderated language and Arabic the least. The panel also found that AI tools cannot scale, likely because low-resource languages continue to be underserved even in training. The shift towards LLMs means in fact a higher likelihood of bias, since low-resource languages constitute smaller (and thus less diverse) training data. Labor-wise, the rise of LLMs for moderation has meant a shift from vision-related annotation tasks towards hiring workers with physics and coding backgrounds to improve code generation models.</p>
@@ -170,13 +173,13 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 <h4 id="heading-21"><strong>One is a question of infrastructure</strong></h4>
 <p>Decentralisation, composable architectures, as well as a more diverse array of “alt-tech” platforms fragment platform markets and create new governance interventions. This fragmentation opens the field to a wider range of actors (community moderators, trusted flaggers, middleware designers, cooperatives, public institutions, etc) who enter content governance as infrastructural participants. We have seen how this reconfiguration enables new forms of community-based moderation, negotiated norms, and context-sensitive enforcement, while also creating space for public actors to introduce standards through regulation and for grassroots actors to propose alternative designs.</p>
 <h4 id="heading-22"><strong>The second is a question of information asymmetry</strong></h4>
-<p>We face a persistent “governance gap”: the capacity of workers, users, researchers, and public actors to operationalise their demands and values within the infrastructures that govern their sectors. This raises questions of training, education, and institutional support: how do we foster the skills required to translate normative claims into technical and organizational forms, and how do we sustain collaboration across disciplinary, professional, and political boundaries?</p>
+<p>There appears to be a persistent “governance gap”: the capacity of workers, users, researchers, and public actors to operationalise their demands and values within the infrastructures that govern their sectors. This raises questions of training, education, and institutional support: how does one foster the skills required to translate normative claims into technical and organizational forms? And what can be done to train this as a method and civic capacity?</p>
 <h4 id="heading-23"><strong>As such, the third is a question of research</strong></h4>
-<p>Discussing the nature, implications and executions of platform governance inevitably lends to  description or critical research. We describe who is involved in governance and how. We critique the ways in which governance falls short across these actors. Yet, one often shies away from proactive propositions. We may mark a step beyond normative or other critique and towards a form of ethics, i.e., how else governance may be done. This does not need to land on simple solutionism, but on deliberation around applicable concepts, frameworks and protocols. This would entail often uncomfortable interdisciplinary work that helps grasp governance as it is enacted across code, law, labor, and discourse.</p>
+<p>Discussing the nature, implications and executions of platform governance inevitably lends to  description or critical research. Works often describe who is involved in governance and how. They critique the ways in which governance falls short across these actors. Yet, they may sometimes shy way from proactive propositions towards a form of ethics, i.e., how else governance may be done. This does not need to land on solutionism, but on deliberation around applicable concepts, frameworks and protocols.</p>
 <h4 id="heading-24"><strong>And a final one: platform governance research in polarised times</strong></h4>
-<p>Platform governance is inevitably steeped in profound conflicted debates about how and why to moderate public speech. How can research speak both <strong>to</strong> and <strong>beyond</strong> the polarised language of content governance? Should we consider political diversity a criteria for “diverse” research, and intellectual and ideological monocultures a lack thereof? And if so, how do we resolve profound political and normative differences within our field? Some of these challenges appear closer than they look, and conferences like these are special opportunities to continue deliberating about our own forms of governance.</p>
+<p>Platform governance is sometimes (perhaps inevitably) steeped in profound conflicted debates about how and why to moderate public speech. How can research speak both <strong>to</strong> and <strong>beyond</strong> the polarised language of content governance? Should we consider political diversity a criteria for “diverse” research, and intellectual and ideological monocultures a lack thereof? And if so, how does one resolve profound political and normative differences within this field? Some of these challenges appear closer than they look, and conferences like these are special opportunities to continue deliberating about our own forms of governance.</p>
 <h3 id="heading-25"><strong>Funding acknowledgement</strong></h3>
-<p>The 2025 PlatGovNet conference was supported by the Danish National Research Foundation grant DNRF197 for the project "Power over platforms?</p></div></div>
+<p>The 2025 PlatGovNet conference was supported by the Danish National Research Foundation grant DNRF197 for the project “Power over platforms?</p></div></div>
 </div>
 <div class="panel-preview" id="panel-preview">
 <div class="panel-preview-title" id="panel-preview-title"></div>
@@ -190,7 +193,7 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 // Data is already parsed by Python and embedded as JSON
 const dataByYear={"2021": {"civil society and external governance stakeholders": {"theme": "", "presentations": [{"person": "Brenda Dvoskin", "presentation": "Our Last Best Hope: Civil Society Actors\u2019 Participation in Content Governance"}, {"person": "Eugenia Siapera and Paloma Viejo-Otero", "presentation": "Content Moderation and External Stakeholders: Platform Governance and the Role of Experts"}, {"person": "Chris Tenove", "presentation": "When the Shoe is On the Other Foot: Content Moderation by Politicians"}, {"person": "Jeeyun (Sophia) Baik and Hamsini Sridharan", "presentation": "Civil Rights and Silicon Valley: Facebook and Airbnb Civil Rights Audits as a Co-regulatory Governance Framework?"}]}, "platform labour and governance in the gig economy": {"theme": "labour", "presentations": [{"person": "Julian Posada", "presentation": "The Coloniality of Data Annotation Platforms"}, {"person": "Shreeharsh Kelkar and Benjamin Shestakofsky", "presentation": "Making platforms work: relationship labor and the management of publics"}, {"person": "Susanne Klausing", "presentation": "Governance Practices on Online Labour Platforms: A Comparative Case Study of Upwork and Fiverr"}, {"person": "Dzifa Ametowobla and Stefan Kirchner", "presentation": "Does the macro-level matter? A comparative analysis of institutional frameworks and gigwork platforms across EU-28 countries"}]}, "comparative platform regulation": {"theme": "regulation", "presentations": [{"person": "Sacha Molitorisz, Derek Wilding and Karen Lee", "presentation": "The View from Australia: Lessons in How to Regulate Digital Platforms"}, {"person": "Jenny Domino", "presentation": "To De-Platform or Not? Platform Power and State Authority in Myanmar, US, and the Philippines"}, {"person": "Stephan Dreyer and Am\u00e9lie Heldt", "presentation": "Needle versus Haystack: The Required Duality in Regulatory Platform Governance Approaches"}, {"person": "Maria Jose Schmidt-Kessen, Marta Cantero Gamito and Rafaela Nogueira", "presentation": "Studying the Effectiveness of Online Platforms\u2019 Dispute Resolution Mechanisms"}, {"person": "Jonas Pentzien", "presentation": "Converging Distinctiveness? Towards a Conceptual Framework for Comparing Distinctive National Trajectories in Platform Regulation"}, {"person": "Simran Agarwal", "presentation": "State Interest in Content Moderation on Platforms in India"}, {"person": "Zahra Takhshid", "presentation": "Regulating Social Media in the Global South"}, {"person": "Martin Kretschmer, Ula Furgal and Philip Schlesinger", "presentation": "The emergence of platform regulation in the UK: an empirical-legal study"}]}, "under-studied platforms": {"theme": "", "presentations": [{"person": "William Partin", "presentation": "Towards \u201cGame Governance\u201d: Community Moderation in Competitive Digital Games"}, {"person": "Tarunima Prabhakar, Sandeep Mertia and Kruttika Nadig", "presentation": "Against Platform Universalism: A Case Study of Platform-Seeded Trends and Non/Algorithmic Paternalism from India"}, {"person": "Lianrui Jia and Lotus Ruan", "presentation": "Exploring VPN apps: privacy protection, political economy and affordances"}, {"person": "Mehitabel Glenhaber", "presentation": "\u201cTotally Not Poggers, Twitch\u201d: Modding and Moderating the PogChamp Emote"}]}, "content moderation and online communities": {"theme": "community-based moderation", "presentations": [{"person": "Sarah Gilbert", "presentation": "Learning from Experience: How Community Moderation Can Inform Commercial Moderation"}, {"person": "Alice Marwick", "presentation": "Trust and Safety: The Emergence of a Discipline"}, {"person": "Hannah Bloch-Wehba", "presentation": "Content Moderation as Surveillance"}, {"person": "Justus Dreyling and John H. Weitzmann", "presentation": "Wikipedia and the Digital Services Act: The Challenges of Regulating Community-Governed Platforms"}]}, "critical theory": {"theme": "", "presentations": [{"person": "Temi Lasade-Anderson", "presentation": "Tweets of Resistance: A Black Feminist Approach to Platform Governance"}, {"person": "Nathan Schneider", "presentation": "Governable spaces: a feminist architecture for platform policy"}, {"person": "Sarita Schoenebeck, Rahaf Alharbi, Jane Im, Marilyn Iriarte, Amna Batool, Gabriel Grill, Daricia Wilkinson, Eric Gilbert, Audrey Funwie and Mustafa Naseem", "presentation": "Repairing Online Harms: Assessing Punitive and Reparative Justice Approaches"}, {"person": "Katrin Tiidenberg, Susanna Paasonen and Jenny Sunden", "presentation": "Governing the margins? How European sexual social media platforms govern and assign meaning to content"}]}, "advertising and microtargeting": {"theme": "political economy", "presentations": [{"person": "Kate Dommett, Sanne Kruikemeier, Rachel Gibson and Sophie Lecheler", "presentation": "The Positive Democratic Consequences of Political Microtargeting: Exploring the Implications for Platforms"}, {"person": "Steph Hill", "presentation": "Allies and Activists: Advertising Intermediaries in Facebook Content Moderation Governance"}, {"person": "Paddy Leerssen and Tom Dobber", "presentation": "News from the Ad Library: how journalists use public advertising disclosures to hold Facebook advertising accountable"}, {"person": "Sam Andrey, Sam Jeffers, Karim Bardeesy and Clifton van der Linden", "presentation": "Regulating Digital Election Advertisements in Canada: Political Targeting on Facebook in the 2019 Canadian Federal Election"}]}, "empirical methods": {"theme": "methods", "presentations": [{"person": "Martin Fertmann and Matthias C. Kettemann", "presentation": "Leveraging Network Effects: Fast-Tracked Global Platform Research as a Solution for Platform Governance Whac-A-Mole?"}, {"person": "Jef Ausloos", "presentation": "Transparency Rules and Data Rights for Platform Research"}, {"person": "Elizabeth Meehan, Rebekah Tromble and Claes de Vreese", "presentation": "Beyond Algorithmic Auditing: The Need for Independent Policy and Data Pipeline Audits as Mechanisms for Platform Accountability"}, {"person": "Angela Xiao Wu", "presentation": "Repurposing Platform Trace Data for (Transnational) Academic Social Science"}]}, "governing toxicity": {"theme": "content governance", "presentations": [{"person": "Kaiping Chen and Lindsey Middleton", "presentation": "Policing or Pandering Misinformation: A Cross-Platform Moderation Policy Analysis"}, {"person": "Bharath Ganesh", "presentation": "Platform Racism and the Governance of Right-Wing Extremism"}, {"person": "Anna Reepschlager and Elizabeth Dubois", "presentation": "How Harassment and Hate Speech Policies Have Evolved Over Time: Comparing Facebook, Twitter and Reddit"}, {"person": "Julia R. DeCook, Kelley Cotter and Shaheen Kanthawala", "presentation": "Safe From \u201cHarm\u201d: The Governance of Violence by Platforms"}]}, "platform governance with Chinese characteristics": {"theme": "global platform governance", "presentations": [{"person": "Sruthi Kalyani A", "presentation": "If the Heaven is High, Can the Emperor be Far Away? \u2013 Platform Affordances, Immunity, and State Control with Chinese Characteristics"}, {"person": "Yidong Wang", "presentation": "Platform Regulation of Sex and Desire: Content Ecology of Queer Media in China"}, {"person": "Fan Yang", "presentation": "Censorship and Content Moderation in Layers: Investigating Chinese-Australian Media Worker Practices on News-Focused WeChat Official Accounts"}, {"person": "Angela Zhang", "presentation": "Decentralizing Platform Governance: Lawlessness, Fraud and Innovation"}]}}, "2023": {"regulated platform work": {"theme": "labour", "presentations": [{"person": "Soujanya Sridharan and Gautam Misra", "presentation": "Alternate Mechanisms for Labour Organisation and Collective Bargaining in the Gig Economy"}, {"person": "Anushka Mittal", "presentation": "Working in the Shadow of the Platform and the Law"}, {"person": "Luis Hernando Lozano Paredes", "presentation": "Recognising Alternative Platform Governance and Emergent Design: the Case of Drivers Club Bogot\u00e1"}]}, "business models": {"theme": "political economy", "presentations": [{"person": "Rachel Griffin", "presentation": "From Brand Safety to Suitability: Advertisers in Social Media Governance"}, {"person": "Jake Goldenfein and Lee McGuigan", "presentation": "Managed Sovereigns: How Inconsistent Accounts of the Human Rationalize Platform Advertising"}, {"person": "Alex Rochefort and Nathalie Mar\u00e9chal", "presentation": "Platform Governance by Civil Society: the Call for an Accountable Business Model"}]}, "media and platform policy": {"theme": "policy", "presentations": [{"person": "Brenda Dvoskin", "presentation": "Media Giants, the Public Interest, and Civil Society"}, {"person": "Sacha Molitorisz and Michael Davis", "presentation": "An Opaque and Qualified Success: a Review of Australia\u2019s World-First News Media Bargaining Code"}, {"person": "Angela Xiao Wu", "presentation": "On Infrastructural Monopoly: From China\u2019s Media Reform to Chinese Platform Governance"}]}, "justice in platform governance": {"theme": "regulation", "presentations": [{"person": "Amy Hasinoff", "presentation": "A Restorative and Transformative Justice Model for Platform Governance: the Case of Image-based Sexual Abuse"}, {"person": "Moritz Schramm", "presentation": "Emulated Guardians \u2014 Can the Oversight Board and the DSA\u2019s Out-of-Court Dispute Settlement Bodies Control Platform Power?"}, {"person": "Carolina Are", "presentation": "Dysfunctional\u2019 Appeals and Failures of Algorithmic Justice in Instagram and TikTok Content Moderation"}]}, "empirical research": {"theme": "methods", "presentations": [{"person": "Jef Ausloos, Pierre Dewitte and Cristiana Teixeira Santos", "presentation": "The Operationalisation of Data Access Rights in Platform Governance: Data Protection Rights as a Cautionary Tale"}, {"person": "Tyler Quick", "presentation": "Marxian Political Economy and Qualitative Platform Study"}, {"person": "Charlotte Spencer-Smith", "presentation": "Algorithmic Reach Reduction: Platform Accounts of Motivations, Implementation, and Effects"}, {"person": "Rohan Grover", "presentation": "The Epistemic Potential of Data Protection Datasets"}]}, "infrastructures": {"theme": "", "presentations": [{"person": "Charis Papaevangelou and Eugenia Siapera", "presentation": "Big Tech\u2019s Infrastructural Expansion and Digital Colonialism in \u201cGreece 2.0\u201d"}, {"person": "Azadeh Akbari and David Murakami Wood", "presentation": "Authoritarian Smart Cities: Platforms, Governance and Total Urban Surveillance"}, {"person": "Emily West", "presentation": "Platform Governance and the Climate"}, {"person": "Susanne Lloyd-Jones", "presentation": "Regulating cloud platforms as critical infrastructure \u2014 An Australian Perspective"}]}, "cultural production": {"theme": "", "presentations": [{"person": "Daria Deragcheva, Christian Katzenbach and Paloma Viejo Otero", "presentation": "Social Media Creators\u2019 Perspective on Copyright Content Moderation in the EU"}, {"person": "Sarah E.K. Smith and Bethany Berard", "presentation": "Accessing Culture: Grappling with Governance and Content Moderation on Google Arts and Culture"}, {"person": "Louisa Bartolo", "presentation": "How does Amazon Curate History \u2014 and How Should It? Algorithmic Contests over the Past on the World\u2019s Largest Bookstore\u2019"}, {"person": "Gonzalo Bustos, Sebasti\u00e1n Cabello, Pilar Huppi Lo Prete, and Carla Gebetsberger", "presentation": "Strategies of Production and Monetization in the content Creator\u2019s Ecosystem: Self-branding and IP-development Dynamics in Argentina"}]}, "legal theory": {"theme": "theory", "presentations": [{"person": "Artur Pericles Lima Monteiro", "presentation": "Content Moderation Federalism (not Confederalism)"}, {"person": "Divij Joshi", "presentation": "Making Them Dance for their Immunity \u2014 the (F)utility of Platform Regulation Through Conditional Immunity"}, {"person": "Laura Aade", "presentation": "To Ban or Not to Ban? Understanding Platform Discretion in Content Moderation in the Context of Private Governance"}, {"person": "Hesam Nourooz Pour", "presentation": "Judicial Challenging of Social Media Platforms\u2019 Punitive Power: Private Shopping Mall or Public Square?"}]}, "core concepts": {"theme": "theory", "presentations": [{"person": "Daniel Susser", "presentation": "Exploitation and Platform Power"}, {"person": "Paddy Leerssen", "presentation": "Outside the (Black) Box: From Algorithmic Transparency to Platform Observability in Social Media Regulation"}, {"person": "Shivani Salunke", "presentation": "Exploring the Notion of \u201cTrust\u201d in the Regulation of Platforms, Technology, and Privacy"}, {"person": "Anna Gibson, Niall Docherty and Tarleton Gillespie", "presentation": "Health and Toxicity in Content Moderation: The Discursive Work of Justification"}]}, "health and sexuality": {"theme": "", "presentations": [{"person": "Faheem Muhammed Mp and Musthafa Mubashir", "presentation": "Rethinking Platform Governance in India: Rulemaking and Norm-Setting in Aarogya Setu"}, {"person": "Lisa Garwood-Cross and Ben Light", "presentation": "Sexual Content? Sex Education in the Crossfire of Social Media Platform Governance"}, {"person": "Martin Johannes Riedl, Zelly Martin, and Samuel Woolley", "presentation": "\u201cI Think Our system is Very Skewed When it Comes to Censorship\u201d: Pro- and Anti-abortion Rights Activists\u2019 Imaginaries of Platform Governance"}, {"person": "Lucinda Nelson and Nicolas Suzor", "presentation": "Moderating Misogyny: Bridging the Gap Between Feminist Theory and the Policies and Practices of Social Media Platforms"}]}, "AI & platform governance": {"theme": "AI governance", "presentations": [{"person": "Gabriel Nicholas", "presentation": "Hate, in a Thousand Languages: Evaluating Social Media Companies\u2019 Claims About the Multilinguality of Large Language Models"}, {"person": "Tobias Eberwein, Krisztina Rozgonyi, and Florian Saurwein", "presentation": "From Liability to Responsibility and Risk Management: Public Discourses on AI and Algorithmic Platform Governance"}, {"person": "Renana Keydar, Noa Mor, Yuval Shany, and Omri Abend", "presentation": "Too Good To Be Rule: AI\u2019s Transformative Impact on Content Moderation Regulation in the Mirror of the Rules/Standards Distinction"}]}, "understanding platformed work": {"theme": "labour", "presentations": [{"person": "Julian Posada", "presentation": "Navigating Digital Currencies: The Experiences of Latin American Workers with Digital Currency"}, {"person": "Giulia Varaschin, Jonas Valente and Alessio Bertolini, Balaji Parthasarathy, Amela Kurta, Mark Graham and Adam Badger, Pablo Aguera Reneses", "presentation": "Asset-light for Whom? Economic Governance of Digital Labour Platforms and Its Effects on Working Conditions"}, {"person": "Atieh Razavi Yekta", "presentation": "The Platform Economy\u2019s Worker Classification Dilemma"}]}, "content governance": {"theme": "content governance", "presentations": [{"person": "Catalina Goanta, Giovanni De Gregorio and Mateusz Grochowski", "presentation": "One Law to Rule Them All: Comparing Terms of Service on Social Media Platforms Across Regulatory Spaces"}, {"person": "Dennis Redeker", "presentation": "What Do Users Think About Platform Content Moderation? Empirical Evidence about Trust in \u201cAlternative Governors\u201d of Online Speech"}, {"person": "Fan Yang", "presentation": "The Patchwork of Platform Governance: WeChat as a Case Study"}, {"person": "Kyooeun Jang", "presentation": "Trust and Safety\u2026for Whom? Interrogating the Homogenization of Content Governance in the Metaverse"}]}, "ruling the fediverse": {"theme": "the fediverse", "presentations": [{"person": "Darius Kazemi", "presentation": "Where \u201cPlatform\u201d Fails Us: New Approaches to the Study of the Fediverse"}, {"person": "Patricia Aufderheide and Adrienne Massanari, Robert Gehl and Aram Sinnreich", "presentation": "Fool Me Twice: (How) Can We Prevent the Fediverse From Sucking?"}, {"person": "Shagun Jhaver, Seth Frey and Amy Zhang", "presentation": "Decentralizing Platform Power: a Design Space of Multi-level Governance in Online Social Platforms"}]}}, "2025": {"authority and accountability": {"theme": "regulation", "presentations": [{"person": "Matheus Luiz Franco Guedes da Silva", "presentation": "Infrastructure Politics and Delegated Regulation: Platform Governance and the Erosion of Democratic Accountability"}, {"person": "Elizabeth Farries and Eugenia Siapera", "presentation": "Intermediary platform safety mechanisms: The new regulatory actors tasked with realising the Digital Services Act"}, {"person": "Simran Agarwal and Diyi Liu", "presentation": "Theorising Governance Through Platforms: Recentering the Role of the State"}, {"person": "Danielle Flonk and Kevin Garvey", "presentation": "Alignment of digital platforms:  How users, sponsors, and governments bring about design change"}]}, "new objects of moderation": {"theme": "content governance", "presentations": [{"person": "Natalia Stanusch, Martin Degeling, Salvatore Romano, Raziye Buse \u00c7etin, Miazia Sch\u00fcler and Silvia Semenzin", "presentation": "Prompt, Upload, Repeat: The Clutched Entanglement of Platform Economy and Governance in the Face of Agentic AI Accounts"}, {"person": "Christian Katzenbach, Kim Ermler and Luisa Runge", "presentation": "Content Moderation, Next Level? Emergence of Platform Governance from Social Media to Generative AI"}, {"person": "Irma Garnesia and Ross Tapsell", "presentation": "The True Cost of Gendered Disinformation: How Platform Governance Enables Online Gender-Based Violence in Indonesia"}, {"person": "Jeffrey Howard, Conor Sanchez", "presentation": "Beyond Content-Based Enforcement"}]}, "AI governance": {"theme": "AI governance", "presentations": [{"person": "Charlotte Spencer-Smith, Ricarda Dr\u00fceke and Corinna Peil", "presentation": "Governing Discourse: Gender, Alignment and the Normativity of Generative AI"}, {"person": "Joscha Abels and Silvia Weko", "presentation": "The iron law of tech oligarchy: Technological capital and infrastructural power in the cloud and AI-defense sector"}, {"person": "Kelsey Cameron", "presentation": "\"Policing Platform Governance: The Rise and Fall of Axon\u2019s AI Ethics Board\""}, {"person": "Noa Mor", "presentation": "Governing Publicly Available Information within Social Media Ecosystems"}]}, "platform labor and political economy": {"theme": "labour", "presentations": [{"person": "Rohan Grover", "presentation": "The Industrialization of Platform Governance"}, {"person": "\u00d6zg\u00fcr Y\u0131lmaz", "presentation": "Clientelism and Digital Subcontracting in Platform Governance: Paid Subscribers as Intermediaries in the New Political Economy of Streaming"}, {"person": "Sohini Banerjee", "presentation": "Governing Domestic Work by Design: Interface Logics, Algorithmic Management, and Worker Agency in India\u2019s Maid-on-Demand Platforms"}, {"person": "Manuel Tonneau, Diyi Liu, Ryan McGrady, Kevin Zheng, Ralph Schroeder, Ethan Zuckerman and Scott Hale", "presentation": "Language Disparities in Moderation Workforce Allocation by Social Media Platforms"}]}, "the discourse of platform governance": {"theme": "discourse analysis", "presentations": [{"person": "Rebecca Scharlach", "presentation": "Between Bright Futures and Regulatory Oversight: Techno-Optimism in European AI Governance"}, {"person": "Christian Schwieter and Mathilda \u00c5kerlund", "presentation": "Between Free Speech and Digital Sovereignty: A Comparison of European Far-Right Party Discourse on Online Harms and Social Media Regulation"}, {"person": "Jens Pohlmann, Caio Mello and Karin Le\u00f3n Henneberg", "presentation": "NetzDG on Twitter: A Social Network Analysis of Stakeholders in Public Discourse about Platform Regulation in Germany"}, {"person": "Vainius Indilas", "presentation": "Evolving Frames in EU Platform Governance: A Temporal Analysis of European Parliament Discourse (2006\u20132025)"}]}, "politics and conflicts": {"theme": "", "presentations": [{"person": "Leeam Azoulay", "presentation": "Facebook content governance and integrity work during the conflict in Ethiopia"}, {"person": "Tom Divon and Yarden Skop", "presentation": "Governance Absence as Affordance of Resistance: Palestine, Ukraine, and Warzone Visibility"}, {"person": "Nicholas John, Blake Hallinan, Tommaso Trill\u00f3, Omer Rothenstein, Noa Niv and Dana Theiler", "presentation": "Coordinated reporting and the question of harm"}, {"person": "Chris Tenove and Heidi Tworek", "presentation": "Platform Governance to Protect Elections: A Cross-National Comparison"}]}, "the politics of big tech": {"theme": "", "presentations": [{"person": "Gabriel Ernesto Melian P\u00e9rez", "presentation": "Independent Governance in the Digital Age: The Potential of Social Media Councils in the Face of Authoritarian Regimes"}, {"person": "Mai Van Tran, Tom Willaert, Lewis Young and Haymarn Soe Nyunt", "presentation": "How Big Tech Reward Authoritarian Actors\u2019 Algorithmic Adaptations: A Mixed Methods Analysis of Myanmar Social Media"}, {"person": "Yasmin Curzi and Jess Reia", "presentation": "Bargaining Rights: Mapping the Advancement of a Neoconservative Agenda in Platform Governance"}, {"person": "Juan Ortiz Freuler", "presentation": "Infrastructural Sovereignty and the New Geography of Media Dependency: A Digital Infrastructure Analysis of Latin American News Ecosystems"}]}, "beyond content governance": {"theme": "content governance", "presentations": [{"person": "Dennis Redeker, Nikolas Pfannenschmidt, Manuel Baron Romero, Gabriel Dur\u00e1n and Ana Sofie Villa Hernandez", "presentation": "Trust and Safety in Social XR: Mapping the Spatial Turn in Content Moderation"}, {"person": "Phylicia Babb, Stratos Baloutsos, Ariana Polyviou and Polyxeni Vassilakopoulou", "presentation": "Metaverse Governance and Compliance for Public Sector Participation"}, {"person": "Leo Cao", "presentation": "From platform governance to institutional practice: experimentation, misalignment, and contingent adoption of Google Arts & Culture"}, {"person": "Taylor Annabell, Thales Bertaglia and Catalina Goanta", "presentation": "Recommending search & search recommendations: Governance of search products on social media platforms"}]}, "auditing the DSA": {"theme": "regulation", "presentations": [{"person": "Felix Blommaert", "presentation": "An architectural flaw? Uncovering the DSA\u2019s unstable legitimacy foundation"}, {"person": "John Albert", "presentation": "What Are DSA Audits Good For? Lessons From the First Cycle of Article 37 Reports"}, {"person": "Bruno Mattos, D\u00e9bora Salles and R. Marie Santini", "presentation": "Regulating Platform Opacity: Assessing Content Moderation Transparency Through Voluntary and DSA-Mandated Reports"}, {"person": "Eline L. Leijten", "presentation": "Treasure trove or castle in the sky? A critical assessment of the DSA Transparency Database and its effectiveness in enabling scrutiny over content moderation decisions"}]}, "global content moderation": {"theme": "global platform governance", "presentations": [{"person": "Volha Kananovich, Javie Ssozi, Brian Ekdale, Katy Biddle, Sang Jung Kim, Ryan Stoldt and Raven Maragh-Lloyd", "presentation": "\u201cSomeone Has To Keep Track of All This\u201d:  Comparing Audience Perceptions of Platform Governance Strategies in the United States, Ukraine, and Kenya"}, {"person": "Mona Elswah, Aliya Bhatia and Dhanaraj Thakur", "presentation": "Tech Companies and Content Moderation: A Comparative Case Study Analysis of Four Languages in the Global Majority"}, {"person": "Julian Posada, Paola Tubaro and Maicol Quijano", "presentation": "How do platforms pay data workers? Insights from Remotasks Plus Venezuela"}, {"person": "Manuel Tonneau, Dylan Thurgood, Diyi Liu, Manoel Horta Ribeiro and Paul R\u00f6ttger", "presentation": "Assessing global hate speech moderation on Twitter"}]}, "platform dependencies": {"theme": "", "presentations": [{"person": "Kilian Buehling, Joana D. Becker, Annett Heft and Xixuan Zhang", "presentation": "The trade-offs and consequences of banning hyperpartisan media across platforms \u2013 A supply and demand perspective"}, {"person": "Martin Riedl", "presentation": "\u201cTechnological Modernization:\u201d How the U.S. Federal Election Commission established political influencers on social media as a campaign tool"}, {"person": "Ville Aula", "presentation": "Why did the EU legislate on trusted flaggers? Explaining government policy change and adoption of new policy instruments in platform governance"}, {"person": "Moritz Schramm", "presentation": "Governance By Emulation: The Oversight Board, the Digital Services Act, and the Struggle for Platform Accountability"}]}, "prosocial moderation": {"theme": "", "presentations": [{"person": "Lena Slachmuijlder", "presentation": "Prosocial Tech Design Regulation: A Practical Guide"}, {"person": "Himanshu Panday and Hameeda Syed", "presentation": "Bunk With Kindness: Prosocial Platform Governance for Misinformation in Polarized Contexts"}, {"person": "Abhishek Ray and Cesar Martinelli", "presentation": "On the Mediating Role of Two-Sided Platforms"}, {"person": "Soham De, Ariel Procaccia, Max Nickel and Smitha Milli", "presentation": "Sortition for Platform Governance"}]}, "sovereignty and platform power": {"theme": "sovereignty", "presentations": [{"person": "Juan Ortiz Freuler", "presentation": "Platform power and the return of the peripheries: Latin America\u2019s non-aligned path to digital autonomy"}, {"person": "Vincent Obia", "presentation": "Mapping A Research Agenda for Digital Media Regulation in Africa: A Systematic Analysis"}, {"person": "Yasmin Curzi and Andr\u00e9 Ramiro", "presentation": "Technogeopolitics of extremism: Platforms\u2019 regulation in Brazil and the sovereignty of democratic public institutions"}, {"person": "Silvia A. Carretta and Emmanuel Vargas Penagos", "presentation": "From Brussels to Bogot\u00e0: A Comparative Study of Digital Gender-Based Violence Regulations in the EU and Colombia"}]}, "governmentality": {"theme": "", "presentations": [{"person": "Julian Morgan", "presentation": "Platform Governmentality: At the Boundaries of Imaginable Futures"}, {"person": "Blue Miaoran Dong", "presentation": "Branding Private Interests as Public Good: Facebook and Google\u2019s Three Phase Evolution"}, {"person": "Pawel Popiel and Yoonmo Sang", "presentation": "Platform Governance as a Communicative Process"}, {"person": "Rianne Riemens and Jos\u00e9 van Dijck", "presentation": "Big Tech\u2019s AI Discourse and the Reconfiguration of Climate Debates in the US and EU"}]}, "public service (social) media": {"theme": "", "presentations": [{"person": "Aina Errando and Heritiana Ranaivoson", "presentation": "Regulating the News(rooms): Between AI Policies and Editorial Realities in Europe"}, {"person": "Joan Pla", "presentation": "Decentralised Social Media Initiatives within European Public Service Media: Towards a Public Service Social Media?"}, {"person": "Christine Galvagna", "presentation": "Public service social media: Public funding for decentralized social networks"}, {"person": "Zarine Kharazian and Benjamin Mako Hill", "presentation": "The Contested Commons: Governing Knowledge Commons Under Attack"}]}, "community-driven governance": {"theme": "community-based moderation", "presentations": [{"person": "CJ Reynolds", "presentation": "The Twitch Court of Appeals: Unban Request Streams and the Public Adjudication of Community Moderation"}, {"person": "Esteban Morales and Jo\u00e3o Magalhaes", "presentation": "Bottom-up moderation as ideological protest: Making sense of Redditors' ban of X links after Musk\u2019s \u201cNazi salute\u201d"}, {"person": "Renee DiResta and Chirag Pandanda", "presentation": "Building the Middleware Marketplace: Custom Feeds and Community Labelers in Bluesky's Subscribable Governance"}, {"person": "Anas Buhayh, Joshua Paup, Andrew Nordstrom and Robin Burke", "presentation": "Toward Democratic Algorithmic Governance in Federated Social Media"}]}}};
 const allThemes=["AI governance", "community-based moderation", "content governance", "discourse analysis", "global platform governance", "labour", "methods", "policy", "political economy", "regulation", "sovereignty", "the fediverse", "theory"];
-const sidebarHeadings=[{"id": "heading-1", "text": "PlatGovNet2025 Summary: Transitions, frictions, and new realities in global platform governance", "level": 1}, {"id": "heading-2", "text": "PlatGovNet way back when", "level": 2}, {"id": "heading-3", "text": "PlatGovNet in 2025", "level": 2}, {"id": "heading-4", "text": "Governments worldwide are asserting new forms of regulatory authority through formal and informal mechanisms.", "level": 3}, {"id": "heading-5", "text": "In this context, Trump\u2019s second presidency \u2014 only a year old \u2014 has contributed to new content moderation philosophies (or indeed a \u201crenewed\u201d return to older forms).", "level": 3}, {"id": "heading-6", "text": "There are also new opportunities to intervene and pluralise platform markets via decentralised social infrastructures.", "level": 3}, {"id": "heading-7", "text": "Keynote speakers", "level": 2}, {"id": "heading-8", "text": "Aline Os", "level": 3}, {"id": "heading-9", "text": "Jessica Ashooh", "level": 3}, {"id": "heading-10", "text": "Aaron Rodericks", "level": 3}, {"id": "heading-11", "text": "Ongoing conversations", "level": 2}, {"id": "heading-12", "text": "The oldest of these have to do with legislative and regulatory configurations.", "level": 3}, {"id": "heading-13", "text": "Another ongoing conversation is about *political economy and infrastructural constraints.", "level": 3}, {"id": "heading-14", "text": "Discursive and normative foundations of governance", "level": 3}, {"id": "heading-15", "text": "New realities in platform governance", "level": 2}, {"id": "heading-16", "text": "Artificial intelligence has moved from being an object of platform governance to becoming a modality through which governance itself operates.", "level": 3}, {"id": "heading-17", "text": "New objects and logics of moderation", "level": 3}, {"id": "heading-18", "text": "Emerging institutional arrangements", "level": 3}, {"id": "heading-19", "text": "Lastly and unavoidably, a shifting political climate", "level": 3}, {"id": "heading-20", "text": "Transitions", "level": 2}, {"id": "heading-21", "text": "One is a question of infrastructure", "level": 3}, {"id": "heading-22", "text": "The second is a question of information asymmetry", "level": 3}, {"id": "heading-23", "text": "As such, the third is a question of research", "level": 3}, {"id": "heading-24", "text": "And a final one: platform governance research in polarised times", "level": 3}, {"id": "heading-25", "text": "Funding acknowledgement", "level": 2}];
+const sidebarHeadings=[{"id": "heading-1", "text": "PlatGovNet2025 Summary: Transitions, frictions, and new realities in global platform governance", "level": 1}, {"id": "heading-2", "text": "PlatGovNet way back when", "level": 2}, {"id": "heading-3", "text": "PlatGovNet in 2025", "level": 2}, {"id": "heading-4", "text": "Governments worldwide are asserting new forms of regulatory authority through formal and informal mechanisms.", "level": 3}, {"id": "heading-5", "text": "In this context, Trump\u2019s second presidency \u2014 only a year old \u2014 has contributed to new content moderation philosophies (or indeed a \u201crenewed\u201d return to older forms).", "level": 3}, {"id": "heading-6", "text": "There are also new opportunities to intervene and pluralise platform markets via decentralised social infrastructures.", "level": 3}, {"id": "heading-7", "text": "Keynote speakers", "level": 2}, {"id": "heading-8", "text": "Aline Os", "level": 3}, {"id": "heading-9", "text": "Jessica Ashooh", "level": 3}, {"id": "heading-10", "text": "Aaron Rodericks", "level": 3}, {"id": "heading-11", "text": "Ongoing conversations", "level": 2}, {"id": "heading-12", "text": "The oldest of these have to do with legislative and regulatory configurations.", "level": 3}, {"id": "heading-13", "text": "Another ongoing conversation is about political economy and infrastructural constraints.", "level": 3}, {"id": "heading-14", "text": "Discursive and normative foundations of governance", "level": 3}, {"id": "heading-15", "text": "New realities in platform governance", "level": 2}, {"id": "heading-16", "text": "Artificial intelligence has moved from being an object of platform governance to becoming a modality through which governance itself operates.", "level": 3}, {"id": "heading-17", "text": "New objects and logics of moderation", "level": 3}, {"id": "heading-18", "text": "Emerging institutional arrangements", "level": 3}, {"id": "heading-19", "text": "Lastly and unavoidably, a shifting political climate", "level": 3}, {"id": "heading-20", "text": "Transitions", "level": 2}, {"id": "heading-21", "text": "One is a question of infrastructure", "level": 3}, {"id": "heading-22", "text": "The second is a question of information asymmetry", "level": 3}, {"id": "heading-23", "text": "As such, the third is a question of research", "level": 3}, {"id": "heading-24", "text": "And a final one: platform governance research in polarised times", "level": 3}, {"id": "heading-25", "text": "Funding acknowledgement", "level": 2}];
 
 // Render theme filters in left sidebar
 const globalThemesContainer=document.getElementById('global-themes');
@@ -257,25 +260,29 @@ function renderYear(year){
 // Toggle theme filter with count indicator
 function toggleGlobalTheme(theme,el){
   const panels=document.querySelectorAll('.panel-item');
+  const panelLinks=document.querySelectorAll('.panel-link');
   const tags=document.querySelectorAll('.theme-tag');
   const wasActive=el.classList.contains('active');
-
-  // Remove count badges from all tags
   tags.forEach(t=>{
     t.classList.remove('active');
     const existingCount=t.querySelector('.filter-count');
     if(existingCount)existingCount.remove();
   });
-
   if(wasActive){
     panels.forEach(p=>{
       p.classList.remove('greyed-out');
       p.classList.remove('highlighted');
     });
+    // Remove highlighting from panel-links in text
+    panelLinks.forEach(link=>{
+      link.classList.remove('theme-highlighted');
+    });
     filterCountDisplay.style.display='none';
   }else{
     el.classList.add('active');
     let highlightedCount=0;
+    // Build a set of panel names that match the theme
+    const matchingPanels=new Set();
     panels.forEach(p=>{
       if(p.dataset.theme!==theme){
         p.classList.add('greyed-out');
@@ -284,26 +291,34 @@ function toggleGlobalTheme(theme,el){
         p.classList.remove('greyed-out');
         p.classList.add('highlighted');
         highlightedCount++;
+        // Add this panel name to matching set
+        if(p.dataset.panel)matchingPanels.add(p.dataset.panel.toLowerCase());
       }
     });
-    // Add count badge to active tag
+    // Highlight panel-links in text that match the theme
+    panelLinks.forEach(link=>{
+      const panelName=link.dataset.panel?link.dataset.panel.toLowerCase():'';
+      if(matchingPanels.has(panelName)){
+        link.classList.add('theme-highlighted');
+      }else{
+        link.classList.remove('theme-highlighted');
+      }
+    });
     const countBadge=document.createElement('span');
     countBadge.className='filter-count';
     countBadge.textContent=highlightedCount;
     el.appendChild(countBadge);
-    // Show count in display area
     filterCountDisplay.textContent=`${highlightedCount} panels highlighted`;
     filterCountDisplay.style.display='block';
   }
 }
 
-// Setup panel links with fixed right-side preview
+// Setup panel links with preview at same height as hovered link
 function setupPanelLinks(){
-  const links=document.querySelectorAll('.panel-link');
   const panelPreview=document.getElementById('panel-preview');
   const panelPreviewTitle=document.getElementById('panel-preview-title');
   const panelPreviewContent=document.getElementById('panel-preview-content');
-  let hideTimeout;
+  let hideTimeout=null;
 
   // Helper function for case-insensitive panel lookup
   function findPanel(panelName){
@@ -315,58 +330,90 @@ function setupPanelLinks(){
     return null;
   }
 
-  links.forEach(link=>{
+  // Position preview at same height as element, horizontally centered in right sidebar area
+  function positionPreview(element,preview){
+    const rect=element.getBoundingClientRect();
+    const previewHeight=preview.offsetHeight||200;
+    const previewWidth=preview.offsetWidth||320;
+    let topPos=rect.top;
+    if(topPos+previewHeight>window.innerHeight-20){
+      topPos=window.innerHeight-previewHeight-20;
+    }
+    if(topPos<20)topPos=20;
+    preview.style.top=topPos+'px';
+    // Calculate horizontal position: center in the space between main content (800px + left padding) and viewport right edge
+    const summaryMain=document.querySelector('.summary-main');
+    const summaryRect=summaryMain?summaryMain.getBoundingClientRect():{right:rect.right+40};
+    const contentRight=summaryRect.right+40; // 40px gap from content
+    const viewportWidth=window.innerWidth;
+    const availableSpace=viewportWidth-contentRight;
+    // Center the preview in the available space, with minimum margin from edges
+    let leftPos=contentRight+Math.max(0,(availableSpace-previewWidth)/2);
+    // Ensure preview doesn't go off-screen
+    if(leftPos+previewWidth>viewportWidth-20){
+      leftPos=viewportWidth-previewWidth-20;
+    }
+    preview.style.left=leftPos+'px';
+  }
+
+  // Use event delegation for better compatibility
+  document.addEventListener('mouseover',function(e){
+    const link=e.target.closest('.panel-link');
+    if(!link)return;
+
+    clearTimeout(hideTimeout);
     const panelName=link.dataset.panel;
     const panelMatch=findPanel(panelName);
     const panel2025=panelMatch?panelMatch.data:null;
     const panelDisplayName=panelMatch?panelMatch.name:panelName;
 
-    link.addEventListener('mouseenter',()=>{
-      clearTimeout(hideTimeout);
-      if(panel2025){
-        // Set title using the original case from data
-        panelPreviewTitle.textContent=panelDisplayName.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
-        // Build content
-        panelPreviewContent.innerHTML='';
-        panel2025.presentations.forEach(pres=>{
-          const item=document.createElement('div');
-          item.className='participant-item';
-          const name=document.createElement('span');
-          name.className='participant-name';
-          name.textContent=pres.person;
-          const presText=document.createElement('span');
-          presText.className='participant-presentation';
-          presText.textContent=pres.presentation;
-          item.appendChild(name);
-          item.appendChild(presText);
-          panelPreviewContent.appendChild(item);
-        });
-        panelPreview.classList.add('visible');
-      }
-    });
-
-    link.addEventListener('mouseleave',()=>{
-      hideTimeout=setTimeout(()=>{
-        panelPreview.classList.remove('visible');
-      },200);
-    });
-
-    link.onclick=(e)=>{
-      e.preventDefault();
-      const el=document.querySelector(`[data-panel="${panelName}"][data-year="2025"]`);
-      if(el){
-        el.scrollIntoView({behavior:'smooth',block:'center'});
-        el.style.background='#fff8dc';
-        setTimeout(()=>el.style.background='',2000);
-      }
-    };
+    if(panel2025){
+      panelPreviewTitle.textContent=panelDisplayName.split(' ').map(function(w){return w.charAt(0).toUpperCase()+w.slice(1);}).join(' ');
+      panelPreviewContent.innerHTML='';
+      panel2025.presentations.forEach(function(pres){
+        const item=document.createElement('div');
+        item.className='participant-item';
+        const name=document.createElement('span');
+        name.className='participant-name';
+        name.textContent=pres.person;
+        const presText=document.createElement('span');
+        presText.className='participant-presentation';
+        presText.textContent=pres.presentation;
+        item.appendChild(name);
+        item.appendChild(presText);
+        panelPreviewContent.appendChild(item);
+      });
+      panelPreview.classList.add('visible');
+      positionPreview(link,panelPreview);
+    }
   });
 
-  // Keep preview visible when hovering over it
-  panelPreview.addEventListener('mouseenter',()=>{
+  document.addEventListener('mouseout',function(e){
+    const link=e.target.closest('.panel-link');
+    if(!link)return;
+    hideTimeout=setTimeout(function(){
+      panelPreview.classList.remove('visible');
+    },200);
+  });
+
+  // Click handler for panel links
+  document.addEventListener('click',function(e){
+    const link=e.target.closest('.panel-link');
+    if(!link)return;
+    e.preventDefault();
+    const panelName=link.dataset.panel;
+    const el=document.querySelector('[data-panel="'+panelName+'"][data-year="2025"]');
+    if(el){
+      el.scrollIntoView({behavior:'smooth',block:'center'});
+      el.style.background='#fff8dc';
+      setTimeout(function(){el.style.background='';},2000);
+    }
+  });
+
+  panelPreview.addEventListener('mouseenter',function(){
     clearTimeout(hideTimeout);
   });
-  panelPreview.addEventListener('mouseleave',()=>{
+  panelPreview.addEventListener('mouseleave',function(){
     panelPreview.classList.remove('visible');
   });
 }
@@ -378,7 +425,6 @@ function setupTocSidebar(){
   sidebarHeadings.forEach(heading=>{
     const div=document.createElement('div');
     div.className=`sidebar-item level-${heading.level}`;
-    // Truncate long text
     const maxLen=heading.level===1?60:heading.level===2?50:40;
     let text=heading.text;
     if(text.length>maxLen)text=text.substring(0,maxLen)+'...';
@@ -396,43 +442,66 @@ function setupTocSidebar(){
   });
 }
 
-// Setup external link preview (title and URL only)
+// Setup external link preview (title and URL only) at same height as hovered link
 function setupLinkPreview(){
   const preview=document.getElementById('link-preview');
   const previewTitle=document.getElementById('preview-title');
   const previewUrl=document.getElementById('preview-url');
+  let hideTimeout=null;
 
-  // Find all external links in the summary section
-  const summaryLinks=document.querySelectorAll('.summary-section a[href^="http"]');
-  let hideTimeout;
+  // Position preview at same height as element, horizontally centered in right sidebar area
+  function positionPreview(element){
+    const rect=element.getBoundingClientRect();
+    const previewHeight=preview.offsetHeight||80;
+    const previewWidth=preview.offsetWidth||280;
+    let topPos=rect.top;
+    if(topPos+previewHeight>window.innerHeight-20){
+      topPos=window.innerHeight-previewHeight-20;
+    }
+    if(topPos<20)topPos=20;
+    preview.style.top=topPos+'px';
+    // Calculate horizontal position: center in the space between main content and viewport right edge
+    const summaryMain=document.querySelector('.summary-main');
+    const summaryRect=summaryMain?summaryMain.getBoundingClientRect():{right:rect.right+40};
+    const contentRight=summaryRect.right+40; // 40px gap from content
+    const viewportWidth=window.innerWidth;
+    const availableSpace=viewportWidth-contentRight;
+    // Center the preview in the available space, with minimum margin from edges
+    let leftPos=contentRight+Math.max(0,(availableSpace-previewWidth)/2);
+    // Ensure preview doesn't go off-screen
+    if(leftPos+previewWidth>viewportWidth-20){
+      leftPos=viewportWidth-previewWidth-20;
+    }
+    preview.style.left=leftPos+'px';
+  }
 
-  summaryLinks.forEach(link=>{
-    link.addEventListener('mouseenter',(e)=>{
-      clearTimeout(hideTimeout);
-      const url=link.href;
-      const hostname=new URL(url).hostname;
+  // Use event delegation for better compatibility
+  document.addEventListener('mouseover',function(e){
+    const link=e.target.closest('.summary-section a[href^="http"]');
+    if(!link)return;
+    if(link.classList.contains('panel-link'))return;
 
-      // Set preview content - title and URL only
-      previewTitle.textContent=link.textContent||'External Link';
-      previewUrl.textContent=url;
-
-      // Show preview
-      preview.classList.add('visible');
-    });
-
-    link.addEventListener('mouseleave',()=>{
-      hideTimeout=setTimeout(()=>{
-        preview.classList.remove('visible');
-      },200);
-    });
+    clearTimeout(hideTimeout);
+    previewTitle.textContent=link.textContent||'External Link';
+    previewUrl.textContent=link.href;
+    preview.classList.add('visible');
+    positionPreview(link);
   });
 
-  // Keep preview visible when hovering over it
-  preview.addEventListener('mouseenter',()=>{
+  document.addEventListener('mouseout',function(e){
+    const link=e.target.closest('.summary-section a[href^="http"]');
+    if(!link)return;
+    if(link.classList.contains('panel-link'))return;
+
+    hideTimeout=setTimeout(function(){
+      preview.classList.remove('visible');
+    },200);
+  });
+
+  preview.addEventListener('mouseenter',function(){
     clearTimeout(hideTimeout);
   });
-
-  preview.addEventListener('mouseleave',()=>{
+  preview.addEventListener('mouseleave',function(){
     preview.classList.remove('visible');
   });
 }
