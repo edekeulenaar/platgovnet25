@@ -59,8 +59,11 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 .panel-link.theme-highlighted{background:#fff8dc;padding:2px 4px;border-radius:3px}
 .keynote-section{background:#f9f9f9;padding:20px 25px;margin:30px 0;border-left:4px solid #2c5aa0}
 .keynote-section p{margin-bottom:12px}
+/* Blockquote styling */
+.summary-section blockquote{margin:20px 0;padding:15px 20px;background:#f9f9f9;border-left:4px solid #2c5aa0;font-style:italic}
+.summary-section blockquote p{margin-bottom:0}
 /* Panel preview - positioned dynamically via JS at same height as hovered link */
-.panel-preview{position:fixed;left:1100px;width:320px;max-height:50vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;overflow-y:auto}
+.panel-preview{position:fixed;width:320px;max-height:50vh;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s;overflow-y:auto}
 .panel-preview.visible{opacity:1;visibility:visible}
 .panel-preview-title{font-weight:600;font-size:1.1em;margin-bottom:12px;color:#333;border-bottom:1px solid #eee;padding-bottom:8px}
 .panel-preview .participant-item{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f0f0f0}
@@ -68,7 +71,7 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 .panel-preview .participant-name{font-weight:600;display:block;margin-bottom:3px;color:#2c5aa0;font-size:0.95em}
 .panel-preview .participant-presentation{display:block;font-size:0.9em;color:#555;line-height:1.4}
 /* External link preview - positioned dynamically via JS at same height as hovered link */
-.link-preview{position:fixed;left:1100px;width:280px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}
+.link-preview{position:fixed;width:280px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:15px;z-index:10000;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}
 .link-preview.visible{opacity:1;visibility:visible}
 .link-preview-title{font-weight:600;font-size:1em;margin-bottom:8px;color:#333;line-height:1.3}
 .link-preview-url{font-size:0.85em;color:#666;word-break:break-all}
@@ -135,7 +138,7 @@ h1{font-size:2em;margin-bottom:40px;font-weight:600}
 <p>In a sense, the reason for customisation as a central ideological core of Bluesky is a diametrical response to excessive centralisation in other platforms. A centralisation of moderation norms; of ideological and other vested interests of CEOs like Musk; of attention, fomented by a unique algorithmic logic; and of power, obfuscated by the internal decision-making of platform monopolies. While this resembles a return to early federated Web development models, we may speak of a platformised model of distributed governance.</p>
 <p>Naturally, there are tensions. One is the calcification of centralised models even in decentralised infrastructures. This is reflected in regulation, which is primarily written for centralised models, as well as in protocols themselves, which still require some degree of centralisation. In this context, users have been brought up to use largely passive, consumer-friendly interfaces where content primarily comes to them. As such, the familiarity of average platforms is Bluesky’s preferred aesthetic — though “the subversiveness” remains “baked underneath”.</p>
 <p>Bluesky’s composable model has been considered by some of us who see a possibility in implementing “<a href="https://kgi.georgetown.edu/research-and-commentary/better-feeds/">better feeds</a>”, particularly those that may <strong>at least</strong> attenuate the levels of information disorder, perception gaps and affective polarisation measured online. This is the case for <a href="https://knightcolumbia.org/content/bridging-systems">bridging</a> or “<a href="https://arxiv.org/abs/2502.10834">prosocial media</a>” models in general. And though some hope rests on these initiatives, Aaron cautions about the limits of good faith in users almost as from a <a href="https://en.wikipedia.org/wiki/No_Exit">Sartre play</a>:</p>
-<p>> “users don’t want more control over their own experience — they want to have control over the experience of others.”</p>
+<blockquote><p>"users don't want more control over their own experience — they want to have control over the experience of others."</p></blockquote>
 <p>The question then becomes how to manage the <strong>desire of users for negative interaction</strong>. We enter the realm of political philosophy (or perhaps we have never left it), to the extent that governance  invokes perennial ideas of human (user) nature.</p>
 <h3 id="heading-11"><strong>What has come and gone around</strong></h3>
 <h4 id="heading-12">Legislative and regulatory configurations</h4>
@@ -323,16 +326,27 @@ function setupPanelLinks(){
     return null;
   }
 
-  // Position preview at same height as element
+  // Position preview at same height as element, closer to the text on the right
   function positionPreview(element,preview){
     const rect=element.getBoundingClientRect();
     const previewHeight=preview.offsetHeight||200;
+    const previewWidth=preview.offsetWidth||320;
     let topPos=rect.top;
     if(topPos+previewHeight>window.innerHeight-20){
       topPos=window.innerHeight-previewHeight-20;
     }
     if(topPos<20)topPos=20;
     preview.style.top=topPos+'px';
+    // Position horizontally: place close to the right edge of the main content
+    const summaryMain=document.querySelector('.summary-main');
+    const summaryRect=summaryMain?summaryMain.getBoundingClientRect():{right:rect.right};
+    const contentRight=summaryRect.right+20; // 20px gap from content (closer than before)
+    let leftPos=contentRight;
+    // Ensure preview doesn't go off-screen
+    if(leftPos+previewWidth>window.innerWidth-20){
+      leftPos=window.innerWidth-previewWidth-20;
+    }
+    preview.style.left=leftPos+'px';
   }
 
   // Use event delegation for better compatibility
@@ -428,16 +442,27 @@ function setupLinkPreview(){
   const previewUrl=document.getElementById('preview-url');
   let hideTimeout=null;
 
-  // Position preview at same height as element
+  // Position preview at same height as element, closer to the text on the right
   function positionPreview(element){
     const rect=element.getBoundingClientRect();
     const previewHeight=preview.offsetHeight||80;
+    const previewWidth=preview.offsetWidth||280;
     let topPos=rect.top;
     if(topPos+previewHeight>window.innerHeight-20){
       topPos=window.innerHeight-previewHeight-20;
     }
     if(topPos<20)topPos=20;
     preview.style.top=topPos+'px';
+    // Position horizontally: place close to the right edge of the main content
+    const summaryMain=document.querySelector('.summary-main');
+    const summaryRect=summaryMain?summaryMain.getBoundingClientRect():{right:rect.right};
+    const contentRight=summaryRect.right+20; // 20px gap from content (closer than before)
+    let leftPos=contentRight;
+    // Ensure preview doesn't go off-screen
+    if(leftPos+previewWidth>window.innerWidth-20){
+      leftPos=window.innerWidth-previewWidth-20;
+    }
+    preview.style.left=leftPos+'px';
   }
 
   // Use event delegation for better compatibility
