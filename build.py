@@ -16,7 +16,7 @@ import json
 
 def build_html():
     # Check if files exist
-    if not os.path.exists('summary.md'):
+    if not os.path.exists('readme.md'):
         print("ERROR: summary.md not found in current directory")
         sys.exit(1)
     if not os.path.exists('conference_data.csv'):
@@ -26,7 +26,7 @@ def build_html():
     print("Loading files...")
     
     # Read markdown
-    with open('summary.md', 'r', encoding='utf-8') as f:
+    with open('readme.md', 'r', encoding='utf-8') as f:
         md_content = f.read()
     
     # Read and parse CSV with auto-detection
